@@ -7,6 +7,7 @@
     "home": "Home",
     "services": "Services",
     "about": "About",
+    "affiliate": "Affiliate",
     "contact": "Contact"
   },
   "hero": {
@@ -15,12 +16,13 @@
     "cta": "Get Your Free Growth Hack"
   },
   "freeTip": {
-    "title": "Unlock the Power of One-Star Reviews",
-    "highlight1": "No one is going to read 200 5-4 star reviews.",
-    "content1": " While they are important, customers tend to read the very bad one-star reviews first.",
-    "highlight2": "Here's a clever FREE tip:",
-    "content2": " ask 2-3 friends/employees to leave a very bad but high quality, and good one-star review. Contact us, we can help you craft those!",
-    "cta": "Get More Growth Hacks"
+    "title": "The Secret to Making One-Star Reviews Work for You",
+    "highlight1": "No one is going to read 200 5-star reviews.",
+    "content1": "But people will read the 1-star reviews first. It's a fact: customers tend to trust the negative reviews more than the positive ones.",
+    "highlight2": "Here's the clever part:",
+    "content2": "We can help you craft 2-3 high-quality, positive 1-star reviews that will make your business shine. Our team of experts will work with you to create reviews that are engaging, informative, and showcase your business in the best possible light.",
+    "content3": "By having a few 1-star reviews that are actually positive, you can create a sense of authenticity and trust with potential customers.",
+    "cta": "Get Started with Our Review Crafting Service"
   },
   "services": {
     "title": "Our AI-Powered Services",
@@ -61,5 +63,15 @@
     "phone": "Phone: (555) 123-4567",
     "address": "Address: 123 Business St, Tech City, TC 12345",
     "formPlaceholder": "Google Form will be embedded here."
+  },
+  "affiliate": {
+    "title": "Become an Affiliate",
+    "description": "Earn 10% commission on every sale, forever!",
+    "subheading": "Refer clients to us and earn a perpetual 10% commission on every sale",
+    "callToAction": "Get Started",
+    "contactForm": {
+      "label": "Leave a comment with your referral information",
+      "placeholder": "Your name, email, and referral details"
+    }
   }
 }

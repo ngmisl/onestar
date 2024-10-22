@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const title = t('affiliate.title');
+const description = t('affiliate.description');
+---
+
+<Layout title={title} description={description}>
+  <Header currentLang={lang} />
+  <main>
+    <section id="affiliate" class="affiliate">
+      <h1>{t('affiliate.title')}</h1>
+      <p>{t('affiliate.description')}</p>
+      <h2>{t('affiliate.subheading')}</h2>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqKC_1ExbqUBQ6E-rAIY_mkM1vbP0aX88TffwHps3knapArQ/viewform?embedded=true" width="500" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+ .affiliate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+ .affiliate h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+ .affiliate p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+ .affiliate iframe {
+    border: none;
+    width: 100%;
+    height: 500px;
+  }
+</style>

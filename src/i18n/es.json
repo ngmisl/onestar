@@ -6,8 +6,9 @@
   "nav": {
     "home": "Inicio",
     "services": "Servicios",
-    "about": "Acerca de",
-    "contact": "Contacto"
+    "about": "Acerca de nosotros",
+    "affiliate": "Affiliate",
+    "contact": "Contáctanos"
   },
   "hero": {
     "title": "Atraiga Más Clientes a Su Negocio Local",
@@ -15,12 +16,13 @@
     "cta": "Obtenga Su Consejo de Crecimiento Gratis"
   },
   "freeTip": {
-    "title": "Desbloquea el Poder de las Reseñas de una Estrella",
+    "title": "El Secreto para que las Reseñas de una Estrella Trabajen a tu Favor",
     "highlight1": "Nadie va a leer 200 reseñas de 5 estrellas.",
-    "content1": " Aunque son importantes, los clientes tienden a leer primero las reseñas muy malas de una estrella.",
-    "highlight2": "Aquí te dejo un consejo inteligente y GRATUITO:",
-    "content2": " Pide a 2-3 amigos/empleados que dejen una reseña muy mala pero de alta calidad, y una buena reseña de una estrella. ¡Contáctanos, podemos ayudarte a crearlas!",
-    "cta": "Obtén más Consejos de Crecimiento"
+    "content1": "Pero la gente sí leerá las reseñas de una estrella primero. Es un hecho: los clientes tienden a confiar más en las reseñas negativas que en las positivas.",
+    "highlight2": "Aquí está la parte inteligente:",
+    "content2": "Podemos ayudarte a crear 2-3 reseñas de una estrella de alta calidad y positivas que harán que tu negocio brille. Nuestro equipo de expertos trabajará contigo para crear reseñas que sean atractivas, informativas y muestren tu negocio en la mejor luz posible.",
+    "content3": "Al tener algunas reseñas de una estrella que son realmente positivas, puedes crear un sentido de autenticidad y confianza con los clientes potenciales.",
+    "cta": "Comienza con Nuestro Servicio de Creación de Reseñas"
   },
   "services": {
     "title": "Nuestros Servicios Impulsados por IA",
@@ -61,5 +63,11 @@
     "phone": "Teléfono: (555) 123-4567",
     "address": "Dirección: 123 Business St, Tech City, TC 12345",
     "formPlaceholder": "El formulario de Google se incrustará aquí."
+  },
+  "affiliate": {
+    "title": "Conviértete en Afiliado",
+    "description": "Gana un 10% de comisión en cada venta, ¡para siempre!",
+    "subheading": "Refiere clientes a nosotros y gana un 10% de comisión perpetua en cada venta",
+    "callToAction": "Comienza"
   }
 }

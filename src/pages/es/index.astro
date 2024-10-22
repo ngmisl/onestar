@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { Icon } from 'astro-icon';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils'
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -25,7 +25,13 @@ const description = t('site.description');
 			<div class="free-tip-content">
 			  <h2>{t('freeTip.title')}</h2>
 			  <p>
-				<span class="highlight">{t('freeTip.highlight1')}</span> {t('freeTip.content1')} <span class="highlight">{t('freeTip.highlight2')}</span> {t('freeTip.content2')}
+				<span class="highlight">{t('freeTip.highlight1')}</span> {t('freeTip.content1')}
+			  </p>
+			  <p>
+				<span class="highlight">{t('freeTip.highlight2')}</span> {t('freeTip.content2')}
+			  </p>
+			  <p>
+				{t('freeTip.content3')}
 			  </p>
 			  <div class="cta-container">
 				<a href={`/${lang}/contact`} class="cta-button">{t('freeTip.cta')}</a>
@@ -232,6 +238,7 @@ const description = t('site.description');
 		.free-tip p {
 			font-size: 0.9rem;
 		}
+
 		.service-item [astro-icon] {
 			width: 2rem;
 			height: 2rem;
