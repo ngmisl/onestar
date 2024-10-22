@@ -1,0 +1,62 @@
+{
+  "site": {
+    "title": "OneStar - Atraiga Más Clientes a Su Negocio Local",
+    "description": "OneStar ofrece soluciones SaaS innovadoras para negocios locales. Optimice su presencia en línea, gestione las reseñas de los clientes y aumente el tráfico de clientes de manera efectiva."
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Atraiga Más Clientes a Su Negocio Local",
+    "subtitle": "OneStar ayuda a los negocios físicos a prosperar en el mundo digital.",
+    "cta": "Obtenga Su Consejo de Crecimiento Gratis"
+  },
+  "freeTip": {
+    "title": "Desbloquee el Poder de las Reseñas de Una Estrella",
+    "content": "Nadie va a leer 200 reseñas de 5-4 estrellas. Aunque son importantes, los clientes tienden a leer primero las reseñas muy malas de una estrella. Aquí tiene un consejo GRATIS inteligente: pida a 2-3 amigos/empleados que dejen una reseña de una estrella muy mala pero de alta calidad y buena. ¡Contáctenos, podemos ayudarle a elaborarlas!",
+    "cta": "Obtenga Más Consejos de Crecimiento"
+  },
+  "services": {
+    "title": "Nuestros Servicios Impulsados por IA",
+    "websiteOptimization": {
+      "title": "Optimización de Sitios Web",
+      "description": "Impulse su presencia en línea con nuestras técnicas de optimización de sitios web impulsadas por IA."
+    },
+    "websiteCreation": {
+      "title": "Creación de Sitios Web",
+      "description": "Obtenga un sitio web impresionante y enfocado en la conversión, adaptado a las necesidades de su negocio."
+    },
+    "googleBusinessManagement": {
+      "title": "Gestión de Google Business",
+      "description": "Establezca y optimice su perfil de Google Business para atraer clientes locales y mejorar los resultados de búsqueda."
+    },
+    "aiReviewSystem": {
+      "title": "Sistema de Reseñas Impulsado por IA",
+      "description": "Nuestro sistema de código QR utiliza IA para gestionar y optimizar las reseñas de sus clientes."
+    }
+  },
+  "about": {
+    "title": "Acerca de OneStar",
+    "content1": "En OneStar, nos apasiona ayudar a los negocios locales a prosperar en la era digital. Nuestro equipo de expertos combina tecnología de IA de vanguardia con estrategias probadas de growth hacking para impulsar su presencia en línea y atraer más clientes a su tienda física.",
+    "content2": "Ya sea que tenga un gimnasio, restaurante o cualquier otro negocio físico, tenemos las herramientas y la experiencia para ayudarle a tener éxito. ¡Nuestra primera consulta siempre es gratuita, así que no dude en contactarnos y ver cómo podemos ayudar a crecer su negocio!"
+  },
+  "cta": {
+    "title": "¿Listo para Impulsar Su Negocio?",
+    "content": "Póngase en contacto para una consulta gratuita y descubra cómo OneStar puede ayudarle a atraer más clientes.",
+    "button": "Contáctenos Ahora"
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "subtitle": "¿Listo para llevar su negocio al siguiente nivel? ¡Póngase en contacto con nosotros hoy!",
+    "howToReach": "Cómo Contactarnos",
+    "formInfo": "Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible. Recuerde, ¡su primera consulta siempre es gratuita!",
+    "alternativeContact": "Alternativamente, puede contactarnos en:",
+    "email": "Correo electrónico: info@onestar.com",
+    "phone": "Teléfono: (555) 123-4567",
+    "address": "Dirección: 123 Business St, Tech City, TC 12345",
+    "formPlaceholder": "El formulario de Google se incrustará aquí."
+  }
+}

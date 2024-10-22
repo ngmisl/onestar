@@ -1,0 +1,60 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<footer>
+	<div class="footer-content">
+		<div class="logo">
+			<Icon name="mdi:star" />
+			<span>OneStar</span>
+		</div>
+		<nav>
+			<a href="/privacy-policy">Privacy Policy</a>
+			<a href="/terms-of-service">Terms of Service</a>
+		</nav>
+		<p>&copy; 2023 OneStar. All rights reserved.</p>
+	</div>
+</footer>
+
+<style>
+	footer {
+		background-color: #f0f0f0;
+		padding: 2rem 1rem;
+		margin-top: 2rem;
+	}
+	.footer-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.logo {
+		display: flex;
+		align-items: center;
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: #333;
+		margin-bottom: 1rem;
+	}
+	.logo [astro-icon] {
+		width: 2rem;
+		height: 2rem;
+		margin-right: 0.5rem;
+	}
+	nav {
+		margin-bottom: 1rem;
+	}
+	nav a {
+		color: #333;
+		text-decoration: none;
+		margin: 0 0.5rem;
+	}
+	nav a:hover {
+		color: rgb(var(--accent));
+	}
+	p {
+		font-size: 0.9rem;
+		color: #666;
+	}
+</style>

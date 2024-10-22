@@ -1,0 +1,62 @@
+{
+  "site": {
+    "title": "OneStar - Drive More Foot Traffic to Your Local Business",
+    "description": "OneStar offers innovative SaaS solutions for local businesses. Optimize your online presence, manage customer reviews, and increase foot traffic effectively."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Drive More Foot Traffic to Your Local Business",
+    "subtitle": "OneStar helps physical businesses thrive in the digital world.",
+    "cta": "Get Your Free Growth Hack"
+  },
+  "freeTip": {
+    "title": "Unlock the Power of One-Star Reviews",
+    "content": "No one is going to read 200 5-4 star reviews. While they are important, customers tend to read the very bad one-star reviews first. Here's a clever FREE tip: ask 2-3 friends/employees to leave a very bad but high quality, and good one-star review. Contact us, we can help you craft those!",
+    "cta": "Get More Growth Hacks"
+  },
+  "services": {
+    "title": "Our AI-Powered Services",
+    "websiteOptimization": {
+      "title": "Website Optimization",
+      "description": "Boost your online presence with our AI-driven website optimization techniques."
+    },
+    "websiteCreation": {
+      "title": "Website Creation",
+      "description": "Get a stunning, conversion-focused website tailored to your business needs."
+    },
+    "googleBusinessManagement": {
+      "title": "Google Business Management",
+      "description": "Establish and optimize your Google Business profile to attract local customers and improve search results."
+    },
+    "aiReviewSystem": {
+      "title": "AI-Powered Review System",
+      "description": "Our QR code system uses AI to manage and optimize your customer reviews."
+    }
+  },
+  "about": {
+    "title": "About OneStar",
+    "content1": "At OneStar, we're passionate about helping local businesses thrive in the digital age. Our team of experts combines cutting-edge AI technology with proven growth hacking strategies to boost your online presence and drive more customers to your physical store.",
+    "content2": "Whether you run a gym, restaurant, or any other brick-and-mortar business, we have the tools and expertise to help you succeed. Our first consultation is always free, so don't hesitate to reach out and see how we can help grow your business!"
+  },
+  "cta": {
+    "title": "Ready to Boost Your Business?",
+    "content": "Get in touch for a free consultation and discover how OneStar can help you attract more customers.",
+    "button": "Contact Us Now"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to take your business to the next level? Get in touch with us today!",
+    "howToReach": "How to Reach Us",
+    "formInfo": "Fill out the form below and we'll get back to you as soon as possible. Remember, your first consultation is always free!",
+    "alternativeContact": "Alternatively, you can reach us at:",
+    "email": "Email: info@onestar.com",
+    "phone": "Phone: (555) 123-4567",
+    "address": "Address: 123 Business St, Tech City, TC 12345",
+    "formPlaceholder": "Google Form will be embedded here."
+  }
+}

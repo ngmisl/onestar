@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "Contacto OneStar - Póngase en Contacto para Soluciones Inteligentes de Negocios";
+const description = "Contacte a OneStar para obtener soluciones SaaS innovadoras para impulsar la presencia en línea y las reseñas de clientes de su gimnasio, restaurante o tienda física.";
+---
+
+<Layout title={title} description={description}>
+	<Header currentLang="es" />
+	<main>
+		<h1>Contáctenos</h1>
+		<p>¿Listo para llevar su negocio al siguiente nivel? ¡Póngase en contacto con nosotros hoy!</p>
+		<div class="contact-content">
+			<div class="contact-info">
+				<h2>Cómo Contactarnos</h2>
+				<p>Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible. Recuerde, ¡su primera consulta siempre es gratuita!</p>
+				<p>Alternativamente, puede contactarnos en:</p>
+				<ul>
+					<li>Correo electrónico: info@onestar.com</li>
+					<li>Teléfono: (555) 123-4567</li>
+					<li>Dirección: 123 Business St, Tech City, TC 12345</li>
+				</ul>
+			</div>
+			<div class="contact-form">
+				<!-- Placeholder for Google Form -->
+				<p>El formulario de Google se incrustará aquí.</p>
+			</div>
+		</div>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+	h1 {
+		font-size: 2.5rem;
+		color: rgb(var(--accent));
+		margin-bottom: 1rem;
+	}
+	.contact-content {
+		display: flex;
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	.contact-info, .contact-form {
+		flex: 1;
+	}
+	.contact-info ul {
+		list-style-type: none;
+		padding: 0;
+	}
+	.contact-info li {
+		margin-bottom: 0.5rem;
+	}
+	@media (max-width: 768px) {
+		.contact-content {
+			flex-direction: column;
+		}
+	}
+</style>

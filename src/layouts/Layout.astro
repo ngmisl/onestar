@@ -1,0 +1,106 @@
+---
+import { SEO } from 'astro-seo';
+import GDPRBanner from '../components/GDPRBanner.astro';
+import { getLangFromUrl } from '../i18n/utils';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+		<SEO
+			title={title}
+			description={description}
+			openGraph={{
+				basic: {
+					title: title,
+					type: "website",
+					image: "/og-image.png",
+				}
+			}}
+			twitter={{
+				creator: "@onestar"
+			}}
+			extend={{
+				link: [{ rel: "icon", href: "/favicon.svg" }],
+				meta: [
+					{ name: "twitter:image", content: "/og-image.png" },
+					{ name: "twitter:title", content: title },
+					{ name: "twitter:description", content: description },
+				],
+			}}
+		/>
+	</head>
+	<body>
+		<slot />
+		<GDPRBanner />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 0, 84, 166;
+		--accent-light: 135, 206, 250;
+		--accent-dark: 0, 51, 102;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: 'Inter', sans-serif;
+		background: #f6f6f6;
+		color: #333;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+	main {
+		flex: 1;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0 0 1rem 0;
+		color: rgb(var(--accent-dark));
+	}
+	p {
+		margin: 0 0 1rem 0;
+		line-height: 1.5;
+	}
+	.cta-button {
+		display: inline-block;
+		background-color: rgb(var(--accent));
+		color: white;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		text-decoration: none;
+		font-weight: bold;
+		transition: background-color 0.3s ease;
+	}
+	.cta-button:hover {
+		background-color: rgb(var(--accent-dark));
+	}
+	@media (max-width: 768px) {
+		html {
+			font-size: 14px;
+		}
+	}
+</style>

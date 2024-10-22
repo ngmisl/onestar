@@ -1,0 +1,58 @@
+---
+---
+
+<div id="gdpr-banner" class="gdpr-banner">
+	<p>We use cookies to improve your experience on our site. By continuing to use our site, you agree to our use of cookies.</p>
+	<button id="accept-gdpr">Accept</button>
+</div>
+
+<script>
+	const banner = document.getElementById('gdpr-banner');
+	const acceptButton = document.getElementById('accept-gdpr');
+
+	if (localStorage.getItem('gdpr-accepted') !== 'true') {
+		banner.style.display = 'flex';
+	}
+
+	acceptButton.addEventListener('click', () => {
+		localStorage.setItem('gdpr-accepted', 'true');
+		banner.style.display = 'none';
+	});
+</script>
+
+<style>
+	.gdpr-banner {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: #333;
+		color: #fff;
+		padding: 1rem;
+		display: none;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 1000;
+	}
+	p {
+		margin: 0;
+		padding-right: 1rem;
+	}
+	button {
+		background-color: #fff;
+		color: #333;
+		border: none;
+		padding: 0.5rem 1rem;
+		cursor: pointer;
+		font-weight: bold;
+	}
+	@media (max-width: 768px) {
+		.gdpr-banner {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		p {
+			margin-bottom: 1rem;
+		}
+	}
+</style>

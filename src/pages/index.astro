@@ -1,0 +1,237 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Icon } from 'astro-icon';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const title = t('site.title');
+const description = t('site.description');
+---
+
+<Layout title={title} description={description}>
+	<Header currentLang={lang} />
+	<main>
+		<section class="hero">
+			<h1>{t('hero.title')}</h1>
+			<p>{t('hero.subtitle')}</p>
+			<a href="#free-tip" class="cta-button">{t('hero.cta')}</a>
+		</section>
+
+		<section id="free-tip" class="free-tip">
+			<div class="free-tip-content">
+				<h2>{t('freeTip.title')}</h2>
+				<p>{t('freeTip.content')}</p>
+				<div class="cta-container">
+					<a href={`/contact`} class="cta-button">{t('freeTip.cta')}</a>
+				</div>
+			</div>
+			<div class="free-tip-image">
+				<img src="/free-tip-image.webp" alt="A business owner confidently managing online reviews on a tablet" width="400" height="300" />
+			</div>
+		</section>
+
+		<section id="services" class="services">
+			<h2>{t('services.title')}</h2>
+			<div class="service-grid">
+				<div class="service-item">
+					<Icon name="mdi:web" />
+					<h3>{t('services.websiteOptimization.title')}</h3>
+					<p>{t('services.websiteOptimization.description')}</p>
+				</div>
+				<div class="service-item">
+					<Icon name="mdi:creation" />
+					<h3>{t('services.websiteCreation.title')}</h3>
+					<p>{t('services.websiteCreation.description')}</p>
+				</div>
+				<div class="service-item">
+					<Icon name="mdi:google" />
+					<h3>{t('services.googleBusinessManagement.title')}</h3>
+					<p>{t('services.googleBusinessManagement.description')}</p>
+				</div>
+				<div class="service-item">
+					<Icon name="mdi:qrcode" />
+					<h3>{t('services.aiReviewSystem.title')}</h3>
+					<p>{t('services.aiReviewSystem.description')}</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="about">
+			<h2>{t('about.title')}</h2>
+			<p>{t('about.content1')}</p>
+			<p>{t('about.content2')}</p>
+		</section>
+
+		<section class="cta">
+			<h2>{t('cta.title')}</h2>
+			<p>{t('cta.content')}</p>
+			<a href={`/contact`} class="cta-button">{t('cta.button')}</a>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.hero {
+		text-align: center;
+		padding: 4rem 0;
+		background-color: #f0f8ff;
+	}
+	.hero h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+	.hero p {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+	}
+	.free-tip {
+		display: flex;
+		align-items: center;
+		background-color: #ff6b6b;
+		padding: 2rem;
+		border-radius: 8px;
+		margin: 2rem 0;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	.free-tip-content {
+		flex: 1;
+		padding-right: 2rem;
+		color: white;
+	}
+	.free-tip h2 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: white;
+	}
+	.free-tip p {
+		font-size: 1.1rem;
+		margin-bottom: 1.5rem;
+	}
+	.free-tip .cta-button {
+		background-color: white;
+		color: #ff6b6b;
+		font-weight: bold;
+		padding: 0.75rem 1.5rem;
+		font-size: 1.1rem;
+	}
+	.free-tip .cta-button:hover {
+		background-color: #f0f0f0;
+	}
+	.free-tip-image {
+		flex: 1;
+	}
+	.free-tip-image img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	.services {
+		margin-bottom: 2rem;
+	}
+	.service-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+	.service-item {
+		background-color: #fff;
+		padding: 1.5rem;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.service-item [astro-icon] {
+		width: 3rem;
+		height: 3rem;
+		color: rgb(var(--accent));
+		margin-bottom: 1rem;
+	}
+	.service-item h3 {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+	}
+	.service-item p {
+		font-size: 0.9rem;
+		line-height: 1.4;
+	}
+	.about {
+		background-color: #f0f8ff;
+		padding: 2rem;
+		border-radius: 8px;
+		margin-bottom: 2rem;
+	}
+	.cta {
+		text-align: center;
+		background-color: #ffe4e1;
+		padding: 2rem;
+		border-radius: 8px;
+	}
+	.cta-button {
+		display: inline-block;
+		background-color: rgb(var(--accent));
+		color: white;
+		text-decoration: none;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		font-weight: bold;
+		transition: background-color 0.3s ease;
+	}
+	.cta-button:hover {
+		background-color: rgb(var(--accent-dark));
+	}
+	@media (max-width: 768px) {
+		.free-tip {
+			flex-direction: column;
+		}
+		.free-tip-content {
+			padding-right: 0;
+			margin-bottom: 1rem;
+		}
+		.service-grid {
+			grid-template-columns: 1fr;
+		}
+		.service-item [astro-icon] {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+		.service-item h3 {
+			font-size: 1.1rem;
+		}
+		.service-item p {
+			font-size: 0.85rem;
+		}
+	}
+	@media (max-width: 480px) {
+		.hero h1 {
+			font-size: 2rem;
+		}
+		.hero p {
+			font-size: 1rem;
+		}
+		.free-tip h2 {
+			font-size: 1.5rem;
+		}
+		.free-tip p {
+			font-size: 0.9rem;
+		}
+		.service-item [astro-icon] {
+			width: 2rem;
+			height: 2rem;
+		}
+		.service-item h3 {
+			font-size: 1rem;
+		}
+		.service-item p {
+			font-size: 0.8rem;
+		}
+	}
+</style>

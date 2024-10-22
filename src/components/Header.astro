@@ -1,0 +1,95 @@
+---
+import { Icon } from 'astro-icon';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { languages } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { currentLang = lang } = Astro.props;
+---
+
+<header>
+	<nav>
+		<a href={currentLang === 'en' ? '/' : `/${currentLang}`} class="logo">
+			<Icon name="mdi:star" />
+			<span>OneStar</span>
+		</a>
+		<ul>
+			<li><a href={currentLang === 'en' ? '/#services' : `/${currentLang}#services`}>{t('nav.services')}</a></li>
+			<li><a href={currentLang === 'en' ? '/#about' : `/${currentLang}#about`}>{t('nav.about')}</a></li>
+			<li><a href={currentLang === 'en' ? '/contact' : `/${currentLang}/contact`}>{t('nav.contact')}</a></li>
+			<li class="lang-switcher">
+				{Object.entries(languages).map(([code, label]) => (
+					code !== currentLang && (
+						<a href={code === 'en' ? '/' : `/${code}`} title={`Switch to ${label}`}>
+							{code === 'en' ? '🇺🇸' : '🇪🇸'}
+						</a>
+					)
+				))}
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<style>
+	header {
+		background-color: #fff;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		padding: 1rem;
+	}
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.logo {
+		display: flex;
+		align-items: center;
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: rgb(var(--accent));
+		text-decoration: none;
+	}
+	.logo [astro-icon] {
+		width: 2rem;
+		height: 2rem;
+		margin-right: 0.5rem;
+	}
+	ul {
+		display: flex;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		margin-left: 1rem;
+	}
+	a {
+		color: #333;
+		text-decoration: none;
+		font-weight: 500;
+	}
+	a:hover {
+		color: rgb(var(--accent));
+	}
+	.lang-switcher a {
+		font-size: 1.5rem;
+		text-decoration: none;
+	}
+	@media (max-width: 768px) {
+		nav {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		ul {
+			margin-top: 1rem;
+		}
+		li {
+			margin-left: 0;
+			margin-right: 1rem;
+		}
+	}
+</style>

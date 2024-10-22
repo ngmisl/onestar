@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const title = t('site.title');
+const description = t('site.description');
+---
+
+<Layout title={title} description={description}>
+	<Header currentLang={lang} />
+	<main>
+		<h1>{t('contact.title')}</h1>
+		<p>{t('contact.subtitle')}</p>
+		<div class="contact-content">
+			<div class="contact-info">
+				<h2>{t('contact.howToReach')}</h2>
+				<p>{t('contact.formInfo')}</p>
+				<p>{t('contact.alternativeContact')}</p>
+				<ul>
+					<li>{t('contact.email')}</li>
+					<li>{t('contact.phone')}</li>
+					<li>{t('contact.address')}</li>
+				</ul>
+			</div>
+			<div class="contact-form">
+				<!-- Placeholder for Google Form -->
+				<p>{t('contact.formPlaceholder')}</p>
+			</div>
+		</div>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+	h1 {
+		font-size: 2.5rem;
+		color: rgb(var(--accent));
+		margin-bottom: 1rem;
+	}
+	.contact-content {
+		display: flex;
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	.contact-info, .contact-form {
+		flex: 1;
+	}
+	.contact-info ul {
+		list-style-type: none;
+		padding: 0;
+	}
+	.contact-info li {
+		margin-bottom: 0.5rem;
+	}
+	@media (max-width: 768px) {
+		.contact-content {
+			flex-direction: column;
+		}
+	}
+</style>

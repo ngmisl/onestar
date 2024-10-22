@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Privacy Policy - OneStar";
+const description = "OneStar's Privacy Policy outlines how we collect, use, and protect your personal information.";
+---
+
+<Layout title={title} description={description}>
+	<Header />
+	<main>
+		<h1>Privacy Policy</h1>
+		<p>Last updated: [Current Date]</p>
+		<section>
+			<h2>1. Introduction</h2>
+			<p>OneStar ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services.</p>
+		</section>
+		<section>
+			<h2>2. Information We Collect</h2>
+			<p>We collect information that you provide directly to us, such as when you create an account, use our services, or communicate with us. This may include:</p>
+			<ul>
+				<li>Contact information (e.g., name, email address, phone number)</li>
+				<li>Business information</li>
+				<li>Payment information</li>
+				<li>Communication preferences</li>
+			</ul>
+		</section>
+		<section>
+			<h2>3. How We Use Your Information</h2>
+			<p>We use the information we collect to:</p>
+			<ul>
+				<li>Provide, maintain, and improve our services</li>
+				<li>Process transactions and send related information</li>
+				<li>Send you technical notices, updates, and support messages</li>
+				<li>Respond to your comments and questions</li>
+				<li>Analyze usage patterns and trends</li>
+			</ul>
+		</section>
+		<section>
+			<h2>4. Data Security</h2>
+			<p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized or unlawful processing, accidental loss, destruction, or damage.</p>
+		</section>
+		<section>
+			<h2>5. Your Rights</h2>
+			<p>You have the right to access, correct, or delete your personal information. You may also have the right to restrict or object to certain processing of your data.</p>
+		</section>
+		<section>
+			<h2>6. Changes to This Policy</h2>
+			<p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+		</section>
+		<section>
+			<h2>7. Contact Us</h2>
+			<p>If you have any questions about this Privacy Policy, please contact us at privacy@onestar.com.</p>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+	h1 {
+		font-size: 2.5rem;
+		color: rgb(var(--accent));
+		margin-bottom: 1rem;
+	}
+	h2 {
+		font-size: 1.8rem;
+		color: rgb(var(--accent));
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+	section {
+		margin-bottom: 2rem;
+	}
+	ul {
+		margin-left: 2rem;
+	}
+</style>

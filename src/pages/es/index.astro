@@ -1,0 +1,235 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { Icon } from 'astro-icon';
+
+const title = "OneStar - Atraiga Más Clientes a Su Negocio Local";
+const description = "OneStar ofrece soluciones SaaS innovadoras para negocios locales. Optimice su presencia en línea, gestione las reseñas de los clientes y aumente el tráfico de clientes de manera efectiva.";
+---
+
+<Layout title={title} description={description}>
+	<Header currentLang="es" />
+	<main>
+		<section class="hero">
+			<h1>Atraiga Más Clientes a Su Negocio Local</h1>
+			<p>OneStar ayuda a los negocios físicos a prosperar en el mundo digital.</p>
+			<a href="#free-tip" class="cta-button">Obtenga Su Consejo de Crecimiento Gratis</a>
+		</section>
+
+		<section id="free-tip" class="free-tip">
+			<div class="free-tip-content">
+				<h2>Desbloquee el Poder de las Reseñas de Una Estrella</h2>
+				<p>
+					Nadie va a leer 200 reseñas de 5-4 estrellas. Aunque son importantes, los clientes tienden a leer primero las reseñas muy malas de una estrella. Aquí tiene un consejo GRATIS inteligente: pida a 2-3 amigos/empleados que dejen una reseña de una estrella muy mala pero de alta calidad y buena. ¡Contáctenos, podemos ayudarle a elaborarlas!
+				</p>
+				<div class="cta-container">
+					<a href="/es/contact" class="cta-button">Obtenga Más Consejos de Crecimiento</a>
+				</div>
+			</div>
+			<div class="free-tip-image">
+				<img src="/free-tip-image.jpg" alt="Un propietario de negocio gestionando confiadamente las reseñas en línea en una tableta" width="400" height="300" />
+			</div>
+		</section>
+
+		<section id="services" class="services">
+			<h2>Nuestros Servicios Impulsados por IA</h2>
+			<div class="service-grid">
+				<div class="service-item">
+					<Icon name="mdi:web" />
+					<h3>Optimización de Sitios Web</h3>
+					<p>Impulse su presencia en línea con nuestras técnicas de optimización de sitios web impulsadas por IA.</p>
+				</div>
+				<div class="service-item">
+					<Icon name="mdi:creation" />
+					<h3>Creación de Sitios Web</h3>
+					<p>Obtenga un sitio web impresionante y enfocado en la conversión, adaptado a las necesidades de su negocio.</p>
+				</div>
+				<div class="service-item">
+					<Icon name="mdi:google" />
+					<h3>Gestión de Google Business</h3>
+					<p>Establezca y optimice su perfil de Google Business para atraer clientes locales y mejorar los resultados de búsqueda.</p>
+				</div>
+				<div class="service-item">
+					<Icon name="mdi:qrcode" />
+					<h3>Sistema de Reseñas Impulsado por IA</h3>
+					<p>Nuestro sistema de código QR utiliza IA para gestionar y optimizar las reseñas de sus clientes.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="about">
+			<h2>Acerca de OneStar</h2>
+			<p>En OneStar, nos apasiona ayudar a los negocios locales a prosperar en la era digital. Nuestro equipo de expertos combina tecnología de IA de vanguardia con estrategias probadas de growth hacking para impulsar su presencia en línea y atraer más clientes a su tienda física.</p>
+			<p>Ya sea que tenga un gimnasio, restaurante o cualquier otro negocio físico, tenemos las herramientas y la experiencia para ayudarle a tener éxito. ¡Nuestra primera consulta siempre es gratuita, así que no dude en contactarnos y ver cómo podemos ayudar a crecer su negocio!</p>
+		</section>
+
+		<section class="cta">
+			<h2>¿Listo para Impulsar Su Negocio?</h2>
+			<p>Póngase en contacto para una consulta gratuita y descubra cómo OneStar puede ayudarle a atraer más clientes.</p>
+			<a href="/es/contact" class="cta-button">Contáctenos Ahora</a>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.hero {
+		text-align: center;
+		padding: 4rem 0;
+		background-color: #f0f8ff;
+	}
+	.hero h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+	.hero p {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+	}
+	.free-tip {
+		display: flex;
+		align-items: center;
+		background-color: #ff6b6b;
+		padding: 2rem;
+		border-radius: 8px;
+		margin: 2rem 0;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	.free-tip-content {
+		flex: 1;
+		padding-right: 2rem;
+		color: white;
+	}
+	.free-tip h2 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: white;
+	}
+	.free-tip p {
+		font-size: 1.1rem;
+		margin-bottom: 1.5rem;
+	}
+	.free-tip .cta-button {
+		background-color: white;
+		color: #ff6b6b;
+		font-weight: bold;
+		padding: 0.75rem 1.5rem;
+		font-size: 1.1rem;
+	}
+	.free-tip .cta-button:hover {
+		background-color: #f0f0f0;
+	}
+	.free-tip-image {
+		flex: 1;
+	}
+	.free-tip-image img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	.services {
+		margin-bottom: 2rem;
+	}
+	.service-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+	.service-item {
+		background-color: #fff;
+		padding: 1.5rem;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.service-item [astro-icon] {
+		width: 3rem;
+		height: 3rem;
+		color: rgb(var(--accent));
+		margin-bottom: 1rem;
+	}
+	.service-item h3 {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+	}
+	.service-item p {
+		font-size: 0.9rem;
+		line-height: 1.4;
+	}
+	.about {
+		background-color: #f0f8ff;
+		padding: 2rem;
+		border-radius: 8px;
+		margin-bottom: 2rem;
+	}
+	.cta {
+		text-align: center;
+		background-color: #ffe4e1;
+		padding: 2rem;
+		border-radius: 8px;
+	}
+	.cta-button {
+		display: inline-block;
+		background-color: rgb(var(--accent));
+		color: white;
+		text-decoration: none;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		font-weight: bold;
+		transition: background-color 0.3s ease;
+	}
+	.cta-button:hover {
+		background-color: rgb(var(--accent-dark));
+	}
+	@media (max-width: 768px) {
+		.free-tip {
+			flex-direction: column;
+		}
+		.free-tip-content {
+			padding-right: 0;
+			margin-bottom: 1rem;
+		}
+		.service-grid {
+			grid-template-columns: 1fr;
+		}
+		.service-item [astro-icon] {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+		.service-item h3 {
+			font-size: 1.1rem;
+		}
+		.service-item p {
+			font-size: 0.85rem;
+		}
+	}
+	@media (max-width: 480px) {
+		.hero h1 {
+			font-size: 2rem;
+		}
+		.hero p {
+			font-size: 1rem;
+		}
+		.free-tip h2 {
+			font-size: 1.5rem;
+		}
+		.free-tip p {
+			font-size: 0.9rem;
+		}
+		.service-item [astro-icon] {
+			width: 2rem;
+			height: 2rem;
+		}
+		.service-item h3 {
+			font-size: 1rem;
+		}
+		.service-item p {
+			font-size: 0.8rem;
+		}
+	}
+</style>
