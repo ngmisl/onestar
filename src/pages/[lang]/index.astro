@@ -1,0 +1,16 @@
+---
+import { getLangFromUrl } from '../../i18n/utils';
+import IndexPage from '../index.astro';
+
+const lang = getLangFromUrl(Astro.url);
+
+// This is necessary to make Astro generate pages for all languages
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+---
+
+<IndexPage />

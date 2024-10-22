@@ -5,24 +5,22 @@ import { languages } from '../i18n/ui';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-const { currentLang = lang } = Astro.props;
 ---
 
 <header>
 	<nav>
-		<a href={currentLang === 'en' ? '/' : `/${currentLang}`} class="logo">
+		<a href={`/${lang}`} class="logo">
 			<Icon name="mdi:star" />
 			<span>OneStar</span>
 		</a>
 		<ul>
-			<li><a href={currentLang === 'en' ? '/#services' : `/${currentLang}#services`}>{t('nav.services')}</a></li>
-			<li><a href={currentLang === 'en' ? '/#about' : `/${currentLang}#about`}>{t('nav.about')}</a></li>
-			<li><a href={currentLang === 'en' ? '/contact' : `/${currentLang}/contact`}>{t('nav.contact')}</a></li>
+			<li><a href={`/${lang}#services`}>{t('nav.services')}</a></li>
+			<li><a href={`/${lang}#about`}>{t('nav.about')}</a></li>
+			<li><a href={`/${lang}/contact`}>{t('nav.contact')}</a></li>
 			<li class="lang-switcher">
 				{Object.entries(languages).map(([code, label]) => (
-					code !== currentLang && (
-						<a href={code === 'en' ? '/' : `/${code}`} title={`Switch to ${label}`}>
+					code !== lang && (
+						<a href={`/${code}`} title={`Switch to ${label}`}>
 							{code === 'en' ? '🇺🇸' : '🇪🇸'}
 						</a>
 					)

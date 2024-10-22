@@ -1,17 +1,24 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: 'https://onestar.com', // Replace with your actual domain
+  site: "https://onestar.com", // Replace with your actual domain
   compressHTML: true,
   build: {
-    assets: 'assets',
+    assets: "assets",
   },
   vite: {
     build: {
-      cssMinify: 'lightningcss',
+      cssMinify: "lightningcss",
     },
     ssr: {
-      noExternal: ['astro-icon'],
+      noExternal: ["astro-icon"],
+    },
+    i18n: {
+      defaultLocale: "en",
+      locales: ["en", "es"],
+      routing: {
+        prefixDefaultLocale: false,
+      },
     },
   },
 });
