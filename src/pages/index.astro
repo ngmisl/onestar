@@ -23,16 +23,18 @@ const description = t('site.description');
 
 		<section id="free-tip" class="free-tip">
 			<div class="free-tip-content">
-				<h2>{t('freeTip.title')}</h2>
-				<p>{t('freeTip.content')}</p>
-				<div class="cta-container">
-					<a href={`/${lang}/contact`} class="cta-button">{t('freeTip.cta')}</a>
-				</div>
+			  <h2>{t('freeTip.title')}</h2>
+			  <p>
+				<span class="highlight">{t('freeTip.highlight1')}</span> {t('freeTip.content1')} <span class="highlight">{t('freeTip.highlight2')}</span> {t('freeTip.content2')}
+			  </p>
+			  <div class="cta-container">
+				<a href={`/${lang}/contact`} class="cta-button">{t('freeTip.cta')}</a>
+			  </div>
 			</div>
 			<div class="free-tip-image">
-				<img src="/free-tip-image.webp" alt="A business owner confidently managing online reviews on a tablet" width="400" height="300" />
+			  <img src="/free-tip-image.webp" alt="A business owner confidently managing online reviews on a tablet" width="400" height="300" />
 			</div>
-		</section>
+		  </section>
 
 		<section id="services" class="services">
 			<h2>{t('services.title')}</h2>
@@ -131,6 +133,13 @@ const description = t('site.description');
 		border-radius: 8px;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	}
+
+	.highlight {
+  font-weight: bold;
+  color: rgb(var(--accent));
+  background-color: #ffff00;
+  padding: 2px 4px; /* Add some padding to the highlighted text */
+}
 	.services {
 		margin-bottom: 2rem;
 	}
@@ -223,6 +232,7 @@ const description = t('site.description');
 		.free-tip p {
 			font-size: 0.9rem;
 		}
+
 		.service-item [astro-icon] {
 			width: 2rem;
 			height: 2rem;

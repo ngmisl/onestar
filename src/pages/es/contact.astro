@@ -2,25 +2,29 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
-const title = "Contacto OneStar - Póngase en Contacto para Soluciones Inteligentes de Negocios";
-const description = "Contacte a OneStar para obtener soluciones SaaS innovadoras para impulsar la presencia en línea y las reseñas de clientes de su gimnasio, restaurante o tienda física.";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const title = t('site.title');
+const description = t('site.description');
 ---
 
 <Layout title={title} description={description}>
-	<Header currentLang="es" />
+	<Header currentLang={lang} />
 	<main>
-		<h1>Contáctenos</h1>
-		<p>¿Listo para llevar su negocio al siguiente nivel? ¡Póngase en contacto con nosotros hoy!</p>
+		<h1>{t('contact.title')}</h1>
+		<p>{t('contact.subtitle')}</p>
 		<div class="contact-content">
 			<div class="contact-info">
-				<h2>Cómo Contactarnos</h2>
-				<p>Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible. Recuerde, ¡su primera consulta siempre es gratuita!</p>
-				<p>Alternativamente, puede contactarnos en:</p>
+				<h2>{t('contact.howToReach')}</h2>
+				<p>{t('contact.formInfo')}</p>
+				<p>{t('contact.alternativeContact')}</p>
 				<ul>
-					<li>Correo electrónico: info@onestar.com</li>
-					<li>Teléfono: (555) 123-4567</li>
-					<li>Dirección: 123 Business St, Tech City, TC 12345</li>
+					<li>{t('contact.email')}</li>
+					<li>{t('contact.phone')}</li>
+					<li>{t('contact.address')}</li>
 				</ul>
 			</div>
 			<div class="contact-form">

@@ -15,9 +15,12 @@
     "cta": "Obtenga Su Consejo de Crecimiento Gratis"
   },
   "freeTip": {
-    "title": "Desbloquee el Poder de las Reseñas de Una Estrella",
-    "content": "Nadie va a leer 200 reseñas de 5-4 estrellas. Aunque son importantes, los clientes tienden a leer primero las reseñas muy malas de una estrella. Aquí tiene un consejo GRATIS inteligente: pida a 2-3 amigos/empleados que dejen una reseña de una estrella muy mala pero de alta calidad y buena. ¡Contáctenos, podemos ayudarle a elaborarlas!",
-    "cta": "Obtenga Más Consejos de Crecimiento"
+    "title": "Desbloquea el Poder de las Reseñas de una Estrella",
+    "highlight1": "Nadie va a leer 200 reseñas de 5 estrellas.",
+    "content1": " Aunque son importantes, los clientes tienden a leer primero las reseñas muy malas de una estrella.",
+    "highlight2": "Aquí te dejo un consejo inteligente y GRATUITO:",
+    "content2": " Pide a 2-3 amigos/empleados que dejen una reseña muy mala pero de alta calidad, y una buena reseña de una estrella. ¡Contáctanos, podemos ayudarte a crearlas!",
+    "cta": "Obtén más Consejos de Crecimiento"
   },
   "services": {
     "title": "Nuestros Servicios Impulsados por IA",
