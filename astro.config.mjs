@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://onestar.com", // Replace with your actual domain
+  site: "https://onestar.cloud/",
   compressHTML: true,
   build: {
     assets: "assets",
