@@ -1,58 +1,132 @@
 ---
+const { lang = 'en' } = Astro.props;
+
+const content = {
+  en: {
+    message: "We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",
+    accept: "Accept",
+    settings: "Cookie Settings",
+    policy: "Privacy Policy"
+  },
+  es: {
+    message: "Utilizamos cookies para mejorar tu experiencia. Al continuar visitando este sitio, aceptas nuestro uso de cookies.",
+    accept: "Aceptar",
+    settings: "Configuración",
+    policy: "Política de Privacidad"
+  }
+};
 ---
 
 <div id="gdpr-banner" class="gdpr-banner">
-	<p>We use cookies to improve your experience on our site. By continuing to use our site, you agree to our use of cookies.</p>
-	<button id="accept-gdpr">Accept</button>
+  <p>{content[lang].message}</p>
+  <div class="buttons">
+    <a href={`/${lang === 'es' ? 'es/' : ''}privacy`} class="policy-link">{content[lang].policy}</a>
+    <button id="cookie-settings" class="settings-btn">{content[lang].settings}</button>
+    <button id="accept-cookies" class="accept-btn">{content[lang].accept}</button>
+  </div>
 </div>
 
 <script>
-	const banner = document.getElementById('gdpr-banner');
-	const acceptButton = document.getElementById('accept-gdpr');
+  const banner = document.getElementById('gdpr-banner');
+  const acceptBtn = document.getElementById('accept-cookies');
+  const settingsBtn = document.getElementById('cookie-settings');
 
-	if (localStorage.getItem('gdpr-accepted') !== 'true') {
-		banner.style.display = 'flex';
-	}
+  if (acceptBtn && banner) {
+    if (!localStorage.getItem('cookiesAccepted')) {
+      banner.style.display = 'flex';
+    }
 
-	acceptButton.addEventListener('click', () => {
-		localStorage.setItem('gdpr-accepted', 'true');
-		banner.style.display = 'none';
-	});
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookiesAccepted', 'true');
+      banner.style.display = 'none';
+    });
+  }
+
+  if (settingsBtn) {
+    settingsBtn.addEventListener('click', () => {
+      // Open cookie settings modal (to be implemented)
+      console.log('Cookie settings clicked');
+    });
+  }
 </script>
 
 <style>
-	.gdpr-banner {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background-color: #333;
-		color: #fff;
-		padding: 1rem;
-		display: none;
-		justify-content: space-between;
-		align-items: center;
-		z-index: 1000;
-	}
-	p {
-		margin: 0;
-		padding-right: 1rem;
-	}
-	button {
-		background-color: #fff;
-		color: #333;
-		border: none;
-		padding: 0.5rem 1rem;
-		cursor: pointer;
-		font-weight: bold;
-	}
-	@media (max-width: 768px) {
-		.gdpr-banner {
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		p {
-			margin-bottom: 1rem;
-		}
-	}
+  .gdpr-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  p {
+    margin: 0;
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  button, .policy-link {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+
+  .accept-btn {
+    background: #8B4513;
+    color: white;
+    border: none;
+  }
+
+  .accept-btn:hover {
+    background: #6b340f;
+  }
+
+  .settings-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+
+  .settings-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .policy-link {
+    color: white;
+    text-decoration: none;
+    border: 1px solid transparent;
+  }
+
+  .policy-link:hover {
+    border-color: white;
+  }
+
+  @media (max-width: 768px) {
+    .gdpr-banner {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .buttons {
+      width: 100%;
+      justify-content: center;
+    }
+  }
 </style>
