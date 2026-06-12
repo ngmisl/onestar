@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "OneStar - Drive More Foot Traffic to Your Local Business",
-    "description": "OneStar offers innovative SaaS solutions for local businesses. Optimize your online presence, manage customer reviews, and increase foot traffic effectively."
+    "title": "OneStar | Turn Reviews Into Local Customers",
+    "description": "OneStar helps local businesses win more customers through review and reputation management, Google Business Profile optimization, and fast, simple websites."
   },
   "nav": {
     "home": "Home",
@@ -11,61 +11,62 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Drive More Foot Traffic to Your Local Business",
-    "subtitle": "OneStar helps physical businesses thrive in the digital world.",
-    "cta": "Get Your Free Growth Hack"
+    "title": "Turn Your Reviews Into Walk-In Customers",
+    "subtitle": "OneStar manages your reviews and Google Business Profile so local customers find you, trust you, and walk in.",
+    "cta": "Book Free Consultation"
   },
   "freeTip": {
-    "title": "The Secret to Making One-Star Reviews Work for You",
-    "highlight1": "No one is going to read 200 5-star reviews.",
-    "content1": "But people will read the 1-star reviews first. It's a fact: customers tend to trust the negative reviews more than the positive ones.",
-    "highlight2": "Here's the clever part:",
-    "content2": "We can help you craft 2-3 high-quality, positive 1-star reviews that will make your business shine. Our team of experts will work with you to create reviews that are engaging, informative, and showcase your business in the best possible light.",
-    "content3": "By having a few 1-star reviews that are actually positive, you can create a sense of authenticity and trust with potential customers.",
-    "cta": "Get Started with Our Review Crafting Service"
+    "title": "Your One-Star Reviews Are Your Best Salespeople",
+    "highlight1": "Nobody reads 200 five-star reviews.",
+    "content1": "Customers scroll straight to the one-star reviews and trust them more than any wall of praise. That is where they decide whether to believe you.",
+    "highlight2": "Here is the part most owners miss:",
+    "content2": "A calm, professional, public response to a real negative review convinces skeptics better than 200 five-star reviews ever could. OneStar monitors every review you receive and crafts responses that show future customers how you treat people when something goes wrong.",
+    "content3": "Our QR review system also makes it easy for happy customers to leave authentic positive reviews, so your profile grows on real experiences, not tricks.",
+    "cta": "Put Your Reviews to Work"
   },
   "services": {
-    "title": "Our AI-Powered Services",
+    "title": "What We Do for Local Businesses",
     "websiteOptimization": {
       "title": "Website Optimization",
-      "description": "Boost your online presence with our AI-driven website optimization techniques."
+      "description": "We tune and speed up your existing site so it ranks higher in local searches and turns visitors into calls and walk-ins."
     },
     "websiteCreation": {
       "title": "Website Creation",
-      "description": "Get a stunning, conversion-focused website tailored to your business needs."
+      "description": "We build fast, simple websites that make it easy for nearby customers to find you, call you, and show up."
     },
     "googleBusinessManagement": {
-      "title": "Google Business Management",
-      "description": "Establish and optimize your Google Business profile to attract local customers and improve search results."
+      "title": "Google Business Profile Management",
+      "description": "We keep your profile complete, accurate, and active so you appear when locals search for what you sell."
     },
     "aiReviewSystem": {
-      "title": "AI-Powered Review System",
-      "description": "Our QR code system uses AI to manage and optimize your customer reviews."
+      "title": "AI-Powered QR Review System",
+      "description": "A QR code at your counter invites happy customers to leave a review, and AI helps you respond to every one quickly."
     }
   },
   "about": {
     "title": "About OneStar",
-    "content1": "At OneStar, we're passionate about helping local businesses thrive in the digital age. Our team of experts combines cutting-edge AI technology with proven growth hacking strategies to boost your online presence and drive more customers to your physical store.",
-    "content2": "Whether you run a gym, restaurant, or any other brick-and-mortar business, we have the tools and expertise to help you succeed. Our first consultation is always free, so don't hesitate to reach out and see how we can help grow your business!"
+    "content1": "OneStar works with gyms, restaurants, salons, and local shops that live by their reputation. We manage your reviews, your Google Business Profile, and your website so people nearby choose you over the place down the street.",
+    "content2": "The first consultation is free. We look at your reviews and your online presence, tell you plainly what is hurting you, and explain what we would fix first. If we are not a fit, you still walk away knowing where you stand."
   },
   "cta": {
-    "title": "Ready to Boost Your Business?",
-    "content": "Get in touch for a free consultation and discover how OneStar can help you attract more customers.",
-    "button": "Contact Us Now"
+    "title": "Ready for More Local Customers?",
+    "content": "Tell us about your business and get a free, no-pressure review of your online presence.",
+    "button": "Book Free Consultation"
   },
   "contact": {
     "title": "Contact Us",
-    "subtitle": "Ready to take your business to the next level? Get in touch with us today!",
+    "subtitle": "Tell us about your business. The first consultation is free.",
     "howToReach": "How to Reach Us",
-    "formInfo": "Fill out the form below and we'll get back to you as soon as possible. Remember, your first consultation is always free!",
-    "alternativeContact": "Alternatively, you can reach us at:",
+    "formInfo": "Fill out the form below and we will get back to you as soon as we can.",
+    "alternativeContact": "Or reach us directly:",
     "email": "Email: hi@onestar.cloud",
-    "phone": "WhatsApp: On request"
+    "phone": "WhatsApp: on request",
+    "address": "Remote, worldwide"
   },
   "affiliate": {
     "title": "Become an Affiliate",
-    "description": "Earn 10% commission on every sale, forever!",
-    "subheading": "Refer clients to us and earn a perpetual 10% commission on every sale",
+    "description": "Earn a perpetual 10% commission on every sale.",
+    "subheading": "Refer a client to OneStar and earn 10% of every sale they generate, with no time limit.",
     "callToAction": "Get Started",
     "contactForm": {
       "label": "Leave a comment with your referral information",

@@ -1,71 +1,76 @@
 {
   "site": {
-    "title": "OneStar - Atraiga Más Clientes a Su Negocio Local",
-    "description": "OneStar ofrece soluciones SaaS innovadoras para negocios locales. Optimice su presencia en línea, gestione las reseñas de los clientes y aumente el tráfico de clientes de manera efectiva."
+    "title": "OneStar | Convierte reseñas en clientes",
+    "description": "OneStar ayuda a los negocios locales a ganar clientes con gestión de reseñas y reputación, optimización del Perfil de Empresa en Google y webs rápidas."
   },
   "nav": {
     "home": "Inicio",
     "services": "Servicios",
-    "about": "Acerca de nosotros",
-    "affiliate": "Affiliate",
-    "contact": "Contáctanos"
+    "about": "Nosotros",
+    "affiliate": "Afiliados",
+    "contact": "Contacto"
   },
   "hero": {
-    "title": "Atraiga Más Clientes a Su Negocio Local",
-    "subtitle": "OneStar ayuda a los negocios físicos a prosperar en el mundo digital.",
-    "cta": "Obtenga Su Consejo de Crecimiento Gratis"
+    "title": "Convierte tus reseñas en más clientes",
+    "subtitle": "OneStar gestiona tus reseñas y tu perfil de Google para que los clientes locales te encuentren y confíen en ti.",
+    "cta": "Consulta gratis"
   },
   "freeTip": {
-    "title": "El Secreto para que las Reseñas de una Estrella Trabajen a tu Favor",
-    "highlight1": "Nadie va a leer 200 reseñas de 5 estrellas.",
-    "content1": "Pero la gente sí leerá las reseñas de una estrella primero. Es un hecho: los clientes tienden a confiar más en las reseñas negativas que en las positivas.",
-    "highlight2": "Aquí está la parte inteligente:",
-    "content2": "Podemos ayudarte a crear 2-3 reseñas de una estrella de alta calidad y positivas que harán que tu negocio brille. Nuestro equipo de expertos trabajará contigo para crear reseñas que sean atractivas, informativas y muestren tu negocio en la mejor luz posible.",
-    "content3": "Al tener algunas reseñas de una estrella que son realmente positivas, puedes crear un sentido de autenticidad y confianza con los clientes potenciales.",
-    "cta": "Comienza con Nuestro Servicio de Creación de Reseñas"
+    "title": "Tus reseñas de una estrella venden por ti",
+    "highlight1": "Nadie lee 200 reseñas de cinco estrellas.",
+    "content1": "Los clientes van directos a las reseñas de una estrella y se fían más de ellas que de cualquier muro de elogios. Ahí deciden si creerte o no.",
+    "highlight2": "Y aquí está lo que casi nadie aprovecha:",
+    "content2": "Una respuesta pública, serena y profesional a una crítica real convence a los escépticos mejor que 200 reseñas de cinco estrellas. OneStar vigila cada reseña que recibes y redacta respuestas que muestran cómo tratas a tus clientes cuando algo sale mal.",
+    "content3": "Además, nuestro sistema de reseñas con código QR facilita que tus clientes satisfechos dejen reseñas positivas auténticas, para que tu perfil crezca con experiencias reales, sin trucos.",
+    "cta": "Pon tus reseñas a trabajar"
   },
   "services": {
-    "title": "Nuestros Servicios Impulsados por IA",
+    "title": "Qué hacemos por tu negocio",
     "websiteOptimization": {
-      "title": "Optimización de Sitios Web",
-      "description": "Impulse su presencia en línea con nuestras técnicas de optimización de sitios web impulsadas por IA."
+      "title": "Optimización web",
+      "description": "Ajustamos y aceleramos tu web actual para que suba en las búsquedas locales y convierta visitas en llamadas y clientes."
     },
     "websiteCreation": {
-      "title": "Creación de Sitios Web",
-      "description": "Obtenga un sitio web impresionante y enfocado en la conversión, adaptado a las necesidades de su negocio."
+      "title": "Creación de sitios web",
+      "description": "Creamos webs rápidas y claras que ayudan a los clientes cercanos a encontrarte, llamarte y visitarte."
     },
     "googleBusinessManagement": {
-      "title": "Gestión de Google Business",
-      "description": "Establezca y optimice su perfil de Google Business para atraer clientes locales y mejorar los resultados de búsqueda."
+      "title": "Gestión del Perfil de Empresa en Google",
+      "description": "Mantenemos tu perfil completo, actualizado y activo para que aparezcas cuando alguien busca lo que ofreces."
     },
     "aiReviewSystem": {
-      "title": "Sistema de Reseñas Impulsado por IA",
-      "description": "Nuestro sistema de código QR utiliza IA para gestionar y optimizar las reseñas de sus clientes."
+      "title": "Sistema de reseñas con IA y código QR",
+      "description": "Un código QR en tu mostrador invita a tus clientes satisfechos a dejar reseñas, y la IA te ayuda a responder cada una con rapidez."
     }
   },
   "about": {
-    "title": "Acerca de OneStar",
-    "content1": "En OneStar, nos apasiona ayudar a los negocios locales a prosperar en la era digital. Nuestro equipo de expertos combina tecnología de IA de vanguardia con estrategias probadas de growth hacking para impulsar su presencia en línea y atraer más clientes a su tienda física.",
-    "content2": "Ya sea que tenga un gimnasio, restaurante o cualquier otro negocio físico, tenemos las herramientas y la experiencia para ayudarle a tener éxito. ¡Nuestra primera consulta siempre es gratuita, así que no dude en contactarnos y ver cómo podemos ayudar a crecer su negocio!"
+    "title": "Sobre OneStar",
+    "content1": "OneStar trabaja con gimnasios, restaurantes, peluquerías y comercios locales que viven de su reputación. Gestionamos tus reseñas, tu Perfil de Empresa en Google y tu web para que la gente de tu zona te elija a ti y no al local de al lado.",
+    "content2": "La primera consulta es gratis. Revisamos tus reseñas y tu presencia en línea, te decimos con claridad qué te está perjudicando y qué arreglaríamos primero. Si no encajamos, te llevas igualmente un diagnóstico honesto."
   },
   "cta": {
-    "title": "¿Listo para Impulsar Su Negocio?",
-    "content": "Póngase en contacto para una consulta gratuita y descubra cómo OneStar puede ayudarle a atraer más clientes.",
-    "button": "Contáctenos Ahora"
+    "title": "¿Listo para atraer más clientes locales?",
+    "content": "Cuéntanos sobre tu negocio y recibe una revisión gratuita y sin compromiso de tu presencia en línea.",
+    "button": "Consulta gratis"
   },
   "contact": {
-    "title": "Contáctenos",
-    "subtitle": "¿Listo para llevar su negocio al siguiente nivel? ¡Póngase en contacto con nosotros hoy!",
-    "howToReach": "Cómo Contactarnos",
-    "formInfo": "Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible. Recuerde, ¡su primera consulta siempre es gratuita!",
-    "alternativeContact": "Alternativamente, puede contactarnos en:",
-    "email": "Correo electrónico: hi@onestar.cloud",
-    "phone": "WhatsApp: a petición"
+    "title": "Contacto",
+    "subtitle": "Cuéntanos sobre tu negocio. La primera consulta es gratis.",
+    "howToReach": "Cómo contactarnos",
+    "formInfo": "Completa el formulario y te responderemos lo antes posible. Recuerda que la primera consulta es gratis.",
+    "alternativeContact": "También puedes escribirnos a:",
+    "email": "Correo: hi@onestar.cloud",
+    "phone": "WhatsApp: bajo petición",
+    "address": "Remoto, en todo el mundo"
   },
   "affiliate": {
-    "title": "Conviértete en Afiliado",
-    "description": "Gana un 10% de comisión en cada venta, ¡para siempre!",
-    "subheading": "Refiere clientes a nosotros y gana un 10% de comisión perpetua en cada venta",
-    "callToAction": "Comienza"
+    "title": "Hazte afiliado",
+    "description": "Gana una comisión perpetua del 10% en cada venta.",
+    "subheading": "Recomienda un cliente a OneStar y gana el 10% de cada venta que genere, sin límite de tiempo.",
+    "callToAction": "Empieza ahora",
+    "contactForm": {
+      "label": "Déjanos un comentario con tus datos de referido",
+      "placeholder": "Tu nombre, correo y detalles del referido"
+    }
   }
 }
