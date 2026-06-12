@@ -1,55 +1,33 @@
-# Astro Starter Kit: Basics
+# onestar.cloud
 
-```sh
-npm create astro@latest -- --template basics
-```
+Landing site for OneStar: review and reputation management, Google Business Profile management, websites, and an AI-powered QR review system for local businesses. Bilingual (English at `/`, Spanish at `/es`). Built with Astro 6, deployed to GitHub Pages (see `CNAME`).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Commands
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+| Command           | Action                                |
+| :---------------- | :------------------------------------ |
+| `bun install`     | Install dependencies                  |
+| `bun run dev`     | Dev server at `localhost:4321`        |
+| `bun run build`   | Production build to `./dist/`         |
+| `bun run preview` | Preview the build locally             |
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Requires Node 22+ (or run via bun).
 
-## 🚀 Project Structure
+## Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+- `src/pages/` - routes; `es/` and `[lang]/` re-export the root pages, language resolves from the URL in `src/i18n/utils.ts`
+- `src/i18n/en.json`, `es.json` - all visible copy (identical key sets)
+- `src/layouts/Layout.astro` - head (SEO, JSON-LD, Matomo), design tokens, global styles
+- `public/` - static assets, including the AI/agent discovery files
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## AI compatibility
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Served statically from `public/`:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- `/llms.txt` and `/llms-full.txt` (linked from `<head>` and footer)
+- `/robots.txt` with AI crawlers explicitly allowed + sitemap pointer
+- `/agents.txt`, `/humans.txt`, `/.well-known/security.txt` (RFC 9116)
+- `/sitemap-index.xml` via `@astrojs/sitemap`
+- JSON-LD (`Organization`, `WebSite`, `ProfessionalService`) with `sameAs`, `twitter:card`, absolute `og:image`, PNG favicons, web manifest
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-# onestar
+Content negotiation, structured JSON 404s, and rate-limit headers are not possible on GitHub Pages static hosting.

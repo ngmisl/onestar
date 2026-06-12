@@ -11,7 +11,7 @@ const description = "OneStar's Terms of Service outline the rules and regulation
 	<Header />
 	<main>
 		<h1>Terms of Service</h1>
-		<p>Last updated: 09/2024</p>
+		<p class="doc-meta">Last updated: 09/2024</p>
 		<section>
 			<h2>1. Acceptance of Terms</h2>
 			<p>By accessing or using OneStar's website and services, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p>
@@ -47,7 +47,7 @@ const description = "OneStar's Terms of Service outline the rules and regulation
 		<section>
 			<h2>9. Contact Us</h2>
 			<p>If you have any questions about these Terms, please contact us at hi@onestar.cloud</p>
-			<p>Aunova OÜ
+			<p class="address">Aunova OÜ
 				Ahtri tn 12
 				15551 Tallinn
 				Harju maakond,
@@ -60,22 +60,47 @@ const description = "OneStar's Terms of Service outline the rules and regulation
 
 <style>
 	main {
-		max-width: 800px;
+		width: 100%;
+		max-width: 70ch;
 		margin: 0 auto;
-		padding: 2rem 1rem;
+		padding: clamp(3rem, 6vw, 5rem) 1.5rem 4rem;
+		box-sizing: border-box;
 	}
 	h1 {
-		font-size: 2.5rem;
-		color: rgb(var(--accent));
-		margin-bottom: 1rem;
+		font-size: clamp(1.85rem, 4vw, 2.5rem);
+		line-height: 1.15;
+		letter-spacing: -0.02em;
+		color: var(--ink);
+		margin: 0 0 0.5rem;
 	}
-	h2 {
-		font-size: 1.8rem;
-		color: rgb(var(--accent));
-		margin-top: 2rem;
-		margin-bottom: 1rem;
+	.doc-meta {
+		color: var(--muted);
+		font-size: 0.9rem;
+		margin: 0 0 2rem;
 	}
 	section {
-		margin-bottom: 2rem;
+		border-top: 1px solid var(--line);
+		padding: 1.75rem 0;
+		margin: 0;
+	}
+	section:last-of-type {
+		padding-bottom: 0;
+	}
+	h2 {
+		font-size: 1.25rem;
+		letter-spacing: -0.01em;
+		color: var(--ink);
+		margin: 0 0 0.75rem;
+	}
+	p {
+		color: var(--body);
+		line-height: 1.7;
+		margin: 0 0 1rem;
+	}
+	section p:last-child {
+		margin-bottom: 0;
+	}
+	.address {
+		white-space: pre-line;
 	}
 </style>
