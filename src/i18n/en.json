@@ -61,7 +61,17 @@
     "alternativeContact": "Or reach us directly:",
     "email": "Email: hi@onestar.cloud",
     "phone": "WhatsApp: on request",
-    "address": "Remote, worldwide"
+    "address": "Remote, worldwide",
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your business and what you need help with.",
+      "submit": "Send Message",
+      "sending": "Sending…",
+      "success": "Thanks! Your message is on its way. We'll get back to you soon.",
+      "error": "Something went wrong. Please try again or email us directly."
+    }
   },
   "affiliate": {
     "title": "Become an Affiliate",

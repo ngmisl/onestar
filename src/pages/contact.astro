@@ -40,12 +40,35 @@ const description = t('site.description');
 				</ul>
 			</aside>
 			<div class="contact-form">
-				<iframe
-					src="https://docs.google.com/forms/d/e/1FAIpQLSdqKC_1ExbqUBQ6E-rAIY_mkM1vbP0aX88TffwHps3knapArQ/viewform?embedded=true"
-					width="100%"
-					title={t('contact.title')}
-					loading="lazy"
-				>Loading…</iframe>
+				<form
+					id="contact-form"
+					method="POST"
+					action="https://aunova--fa0f9d9e664211f1acf11607ee4eb77e.web.val.run"
+					data-success={t('contact.form.success')}
+					data-error={t('contact.form.error')}
+					data-sending={t('contact.form.sending')}
+				>
+					<label>
+						<span>{t('contact.form.name')}</span>
+						<input type="text" name="name" required maxlength="200" autocomplete="name" />
+					</label>
+					<label>
+						<span>{t('contact.form.email')}</span>
+						<input type="email" name="email" required maxlength="200" autocomplete="email" />
+					</label>
+					<label>
+						<span>{t('contact.form.message')}</span>
+						<textarea
+							name="message"
+							required
+							rows="7"
+							maxlength="5000"
+							placeholder={t('contact.form.messagePlaceholder')}></textarea>
+					</label>
+					<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp" />
+					<button type="submit">{t('contact.form.submit')}</button>
+					<p class="form-status" role="status" aria-live="polite"></p>
+				</form>
 			</div>
 		</div>
 	</main>
@@ -120,13 +143,74 @@ const description = t('site.description');
 		flex-shrink: 0;
 		color: var(--accent);
 	}
-	.contact-form iframe {
-		display: block;
-		width: 100%;
-		min-height: 640px;
+	.contact-form form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.1rem;
+		background: var(--surface);
+		border: 1px solid var(--line);
+		border-radius: var(--radius-card);
+		padding: clamp(1.5rem, 3vw, 2rem);
+	}
+	.contact-form label {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+	.contact-form label span {
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: var(--ink);
+	}
+	.contact-form input,
+	.contact-form textarea {
+		font: inherit;
+		color: var(--ink);
+		background: var(--bg, #fff);
+		border: 1px solid var(--line);
+		border-radius: var(--radius-input);
+		padding: 0.65rem 0.8rem;
+	}
+	.contact-form input:focus-visible,
+	.contact-form textarea:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 1px;
+	}
+	.contact-form textarea {
+		resize: vertical;
+	}
+	.contact-form .hp {
+		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+	}
+	.contact-form button {
+		font: inherit;
+		font-weight: 600;
+		color: #fff;
+		background: var(--accent);
 		border: 0;
 		border-radius: var(--radius-input);
-		background: var(--surface);
+		padding: 0.75rem 1.25rem;
+		cursor: pointer;
+	}
+	.contact-form button:disabled {
+		opacity: 0.6;
+		cursor: wait;
+	}
+	.form-status {
+		margin: 0;
+		min-height: 1.5em;
+		font-size: 0.95rem;
+		color: var(--body);
+	}
+	.form-status.ok {
+		color: var(--accent);
+	}
+	.form-status.err {
+		color: #c0392b;
 	}
 	@media (max-width: 880px) {
 		.contact-content {
@@ -157,3 +241,35 @@ const description = t('site.description');
 		}
 	}
 </style>
+
+<script>
+	const form = document.getElementById('contact-form') as HTMLFormElement;
+	const status = form.querySelector('.form-status') as HTMLParagraphElement;
+	const button = form.querySelector('button') as HTMLButtonElement;
+	const idleLabel = button.textContent;
+
+	form.addEventListener('submit', async (event) => {
+		event.preventDefault();
+		button.disabled = true;
+		button.textContent = form.dataset.sending ?? '…';
+		status.className = 'form-status';
+		status.textContent = '';
+		try {
+			const res = await fetch(form.action, {
+				method: 'POST',
+				body: new URLSearchParams(new FormData(form) as unknown as Record<string, string>),
+			});
+			const data = await res.json();
+			if (!res.ok || !data.ok) throw new Error(data.error ?? res.statusText);
+			status.classList.add('ok');
+			status.textContent = form.dataset.success ?? 'OK';
+			form.reset();
+		} catch {
+			status.classList.add('err');
+			status.textContent = form.dataset.error ?? 'Error';
+		} finally {
+			button.disabled = false;
+			button.textContent = idleLabel;
+		}
+	});
+</script>

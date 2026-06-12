@@ -61,7 +61,17 @@
     "alternativeContact": "También puedes escribirnos a:",
     "email": "Correo: hi@onestar.cloud",
     "phone": "WhatsApp: bajo petición",
-    "address": "Remoto, en todo el mundo"
+    "address": "Remoto, en todo el mundo",
+    "form": {
+      "name": "Tu nombre",
+      "email": "Tu correo",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos sobre tu negocio y en qué necesitas ayuda.",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando…",
+      "success": "¡Gracias! Tu mensaje está en camino. Te responderemos pronto.",
+      "error": "Algo salió mal. Inténtalo de nuevo o escríbenos directamente."
+    }
   },
   "affiliate": {
     "title": "Hazte afiliado",
