@@ -1,7 +1,10 @@
 import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
+import icon from "astro-icon";
 
 export default defineConfig({
   site: "https://onestar.cloud/",
+  integrations: [sitemap(), icon()],
   compressHTML: true,
   build: {
     assets: "assets",
@@ -9,16 +12,6 @@ export default defineConfig({
   vite: {
     build: {
       cssMinify: "lightningcss",
-    },
-    ssr: {
-      noExternal: ["astro-icon"],
-    },
-    i18n: {
-      defaultLocale: "en",
-      locales: ["en", "es"],
-      routing: {
-        prefixDefaultLocale: false,
-      },
     },
   },
 });

@@ -10,6 +10,38 @@ interface Props {
 
 const { title, description } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
+
+const schema = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "Organization",
+			"@id": "https://onestar.cloud/#organization",
+			name: "OneStar",
+			url: "https://onestar.cloud/",
+			logo: "https://onestar.cloud/og-image.png",
+			email: "hi@onestar.cloud",
+			sameAs: ["https://bsky.app/profile/onestar.cloud"],
+		},
+		{
+			"@type": "WebSite",
+			"@id": "https://onestar.cloud/#website",
+			url: "https://onestar.cloud/",
+			name: "OneStar",
+			publisher: { "@id": "https://onestar.cloud/#organization" },
+			inLanguage: ["en", "es"],
+		},
+		{
+			"@type": "ProfessionalService",
+			name: "OneStar",
+			url: "https://onestar.cloud/",
+			email: "hi@onestar.cloud",
+			areaServed: "Worldwide",
+			description: description,
+			parentOrganization: { "@id": "https://onestar.cloud/#organization" },
+		},
+	],
+};
 ---
 
 <!doctype html>
@@ -18,7 +50,9 @@ const lang = getLangFromUrl(Astro.url);
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<SEO
 			title={title}
 			description={description}
@@ -26,21 +60,31 @@ const lang = getLangFromUrl(Astro.url);
 				basic: {
 					title: title,
 					type: "website",
-					image: "/og-image.png",
+					image: "https://onestar.cloud/og-image.png",
+					url: Astro.url.href,
 				}
 			}}
 			twitter={{
-				creator: "@onestar"
+				card: "summary_large_image",
+				site: "@onestar",
+				creator: "@onestar",
+				title: title,
+				description: description,
+				image: "https://onestar.cloud/og-image.png",
+				imageAlt: title,
 			}}
 			extend={{
-				link: [{ rel: "icon", href: "/favicon.svg" }],
-				meta: [
-					{ name: "twitter:image", content: "/og-image.png" },
-					{ name: "twitter:title", content: title },
-					{ name: "twitter:description", content: description },
+				link: [
+					{ rel: "icon", href: "/favicon.svg" },
+					{ rel: "alternate", type: "text/plain", href: "/llms.txt", title: "llms.txt" },
+					{ rel: "alternate", type: "text/plain", href: "/llms-full.txt", title: "llms-full.txt" },
+					{ rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+					{ rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+					{ rel: "manifest", href: "/site.webmanifest" },
 				],
 			}}
 		/>
+		<script type="application/ld+json" set:html={JSON.stringify(schema)} />
 				<!-- Matomo -->
 		<script>
 			var _paq = window._paq = window._paq || [];
@@ -71,20 +115,30 @@ const lang = getLangFromUrl(Astro.url);
 </html>
 <style is:global>
 	:root {
-		--accent: 0, 84, 166;
-		--accent-light: 135, 206, 250;
-		--accent-dark: 0, 51, 102;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--bg: #f7f8fa;            /* page background */
+		--surface: #ffffff;       /* cards/panels */
+		--ink: #14222e;           /* headings/near-black text */
+		--body: #3d4c5a;          /* body text */
+		--muted: #66788a;         /* secondary text */
+		--line: #e3e8ee;          /* hairlines/borders */
+		--accent: #0054a6;        /* brand blue, the ONLY accent */
+		--accent-deep: #0a335e;   /* hover/dark band */
+		--navy: #0d1f33;          /* dark CTA band */
+		--star: #f0b429;          /* gold, ONLY for star/rating glyphs, never buttons */
+		--radius-card: 14px;
+		--radius-input: 8px;
+		--radius-pill: 999px;
+	}
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
 	}
 	html {
-		font-family: 'Inter', sans-serif;
-		background: #f6f6f6;
-		color: #333;
+		font-family: 'Outfit', system-ui, sans-serif;
+		background: var(--bg);
+		color: var(--body);
+		-webkit-text-size-adjust: 100%;
 	}
 	body {
 		margin: 0;
@@ -92,37 +146,116 @@ const lang = getLangFromUrl(Astro.url);
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
+		font-size: 1rem;
+		line-height: 1.6;
 	}
 	main {
 		flex: 1;
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 2rem 1rem;
+		width: 100%;
+	}
+	.container {
+		width: 100%;
+		max-width: 1100px;
+		margin-inline: auto;
+		padding-inline: clamp(1rem, 4vw, 1.5rem);
 	}
 	h1, h2, h3, h4, h5, h6 {
 		margin: 0 0 1rem 0;
-		color: rgb(var(--accent-dark));
+		color: var(--ink);
+		letter-spacing: -0.02em;
+		line-height: 1.15;
+		font-weight: 700;
 	}
 	p {
 		margin: 0 0 1rem 0;
-		line-height: 1.5;
+		line-height: 1.6;
+		max-width: 65ch;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	a {
+		color: var(--accent);
+	}
+	::selection {
+		background: var(--accent);
+		color: var(--surface);
+	}
+	:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 2px;
 	}
 	.cta-button {
 		display: inline-block;
-		background-color: rgb(var(--accent));
-		color: white;
-		padding: 0.5rem 1rem;
-		border-radius: 4px;
+		background-color: var(--accent);
+		color: var(--surface);
+		padding: 0.75rem 1.5rem;
+		border: 0;
+		border-radius: var(--radius-pill);
 		text-decoration: none;
-		font-weight: bold;
-		transition: background-color 0.3s ease;
+		font-family: inherit;
+		font-size: 1rem;
+		font-weight: 600;
+		line-height: 1.2;
+		white-space: nowrap;
+		cursor: pointer;
+		transition: background-color 0.2s ease, transform 0.15s ease;
 	}
 	.cta-button:hover {
-		background-color: rgb(var(--accent-dark));
+		background-color: var(--accent-deep);
+		transform: translateY(-1px);
 	}
-	@media (max-width: 768px) {
+	.cta-button:active {
+		transform: scale(0.98);
+	}
+	.cta-button:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 3px;
+	}
+	.button-ghost {
+		display: inline-block;
+		background-color: transparent;
+		color: var(--ink);
+		padding: 0.75rem 1.5rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-pill);
+		text-decoration: none;
+		font-family: inherit;
+		font-size: 1rem;
+		font-weight: 600;
+		line-height: 1.2;
+		white-space: nowrap;
+		cursor: pointer;
+		transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+	}
+	.button-ghost:hover {
+		border-color: var(--accent);
+		color: var(--accent);
+		transform: translateY(-1px);
+	}
+	.button-ghost:active {
+		transform: scale(0.98);
+	}
+	@media (max-width: 480px) {
+		.cta-button,
+		.button-ghost {
+			white-space: normal;
+			text-align: center;
+		}
+	}
+	@media (prefers-reduced-motion: no-preference) {
 		html {
-			font-size: 14px;
+			scroll-behavior: smooth;
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
 		}
 	}
 </style>

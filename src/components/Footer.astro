@@ -1,61 +1,86 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 ---
 
 <footer>
-	<div class="footer-content">
-		<div class="logo">
-			<Icon name="mdi:star" />
-			<span>OneStar</span>
+	<div class="footer-content container">
+		<div class="footer-row">
+			<div class="logo">
+				<Icon name="mdi:star" />
+				<span>OneStar</span>
+			</div>
+			<nav>
+				<a href="/privacy-policy">Privacy Policy</a>
+				<a href="/terms-of-service">Terms of Service</a>
+				<a href="https://bsky.app/profile/onestar.cloud" target="_blank">Bluesky</a>
+				<a href="/llms.txt">llms.txt</a>
+				<a href="/.well-known/security.txt">Security</a>
+			</nav>
 		</div>
-		<nav>
-			<a href="/privacy-policy">Privacy Policy</a>
-			<a href="/terms-of-service">Terms of Service</a>
-			<a href="https://bsky.app/profile/onestar.cloud" target="_blank">Bluesky</a>
-		</nav>
 		<p>&copy; 2024 OneStar. All rights reserved.</p>
 	</div>
 </footer>
 
 <style>
 	footer {
-		background-color: #f0f0f0;
-		padding: 2rem 1rem;
-		margin-top: 2rem;
+		background-color: var(--navy);
+		border-top: 1px solid rgba(201, 214, 226, 0.18);
+		padding: 2.5rem 0 2rem;
 	}
-	.footer-content {
-		max-width: 1200px;
-		margin: 0 auto;
+	.footer-row {
 		display: flex;
-		flex-direction: column;
+		justify-content: space-between;
 		align-items: center;
+		flex-wrap: wrap;
+		gap: 1.25rem;
+		margin-bottom: 1.75rem;
 	}
 	.logo {
 		display: flex;
 		align-items: center;
-		font-size: 1.5rem;
-		font-weight: bold;
-		color: #333;
-		margin-bottom: 1rem;
+		gap: 0.5rem;
+		font-size: 1.2rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		color: #ffffff;
 	}
-	.logo [astro-icon] {
-		width: 2rem;
-		height: 2rem;
-		margin-right: 0.5rem;
+	.logo [data-icon] {
+		width: 1.5rem;
+		height: 1.5rem;
+		color: var(--star);
 	}
 	nav {
-		margin-bottom: 1rem;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.5rem 1.5rem;
 	}
 	nav a {
-		color: #333;
+		color: #c9d6e2;
 		text-decoration: none;
-		margin: 0 0.5rem;
+		font-size: 0.95rem;
+		transition: color 0.2s ease;
 	}
-	nav a:hover {
-		color: rgb(var(--accent));
+	nav a:hover,
+	nav a:focus-visible {
+		color: #ffffff;
+		text-decoration: underline;
+		text-underline-offset: 0.25em;
 	}
 	p {
-		font-size: 0.9rem;
-		color: #666;
+		margin: 0;
+		font-size: 0.85rem;
+		color: rgba(201, 214, 226, 0.6);
+	}
+	@media (max-width: 768px) {
+		.footer-row {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		nav {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.75rem;
+		}
 	}
 </style>

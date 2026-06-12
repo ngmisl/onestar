@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -16,243 +16,340 @@ const description = t('site.description');
 	<Header currentLang={lang} />
 	<main>
 		<section class="hero">
-			<h1>{t('hero.title')}</h1>
-			<p>{t('hero.subtitle')}</p>
-			<a href="#free-tip" class="cta-button">{t('hero.cta')}</a>
+			<div class="container hero-grid">
+				<div class="hero-copy">
+					<div class="star-row" aria-hidden="true">
+						<Icon name="mdi:star" />
+						<Icon name="mdi:star-outline" />
+						<Icon name="mdi:star-outline" />
+						<Icon name="mdi:star-outline" />
+						<Icon name="mdi:star-outline" />
+					</div>
+					<h1>{t('hero.title')}</h1>
+					<p class="hero-sub">{t('hero.subtitle')}</p>
+					<a href="#free-tip" class="cta-button">{t('hero.cta')}</a>
+				</div>
+				<div class="hero-visual">
+					<img src="/free-tip-image.webp" alt="A business owner confidently managing online reviews on a tablet" width="400" height="300" />
+				</div>
+			</div>
 		</section>
 
 		<section id="free-tip" class="free-tip">
-			<div class="free-tip-content">
-			  <h2>{t('freeTip.title')}</h2>
-			  <p>
-				<span class="highlight">{t('freeTip.highlight1')}</span> {t('freeTip.content1')}
-			  </p>
-			  <p>
-				<span class="highlight">{t('freeTip.highlight2')}</span> {t('freeTip.content2')}
-			  </p>
-			  <p>
-				{t('freeTip.content3')}
-			  </p>
-			  <div class="cta-container">
-				<a href={`/${lang}/contact`} class="cta-button">{t('freeTip.cta')}</a>
-			  </div>
+			<div class="container free-tip-grid">
+				<div class="free-tip-content">
+					<h2>{t('freeTip.title')}</h2>
+					<p>
+						<span class="highlight">{t('freeTip.highlight1')}</span> {t('freeTip.content1')}
+					</p>
+					<p>
+						<span class="highlight">{t('freeTip.highlight2')}</span> {t('freeTip.content2')}
+					</p>
+					<div class="cta-container">
+						<a href={`/${lang}/contact`} class="cta-button">{t('freeTip.cta')}</a>
+					</div>
+				</div>
+				<aside class="free-tip-note">
+					<Icon name="mdi:star" aria-hidden="true" />
+					<p>{t('freeTip.content3')}</p>
+				</aside>
 			</div>
-			<div class="free-tip-image">
-			  <img src="/free-tip-image.webp" alt="A business owner confidently managing online reviews on a tablet" width="400" height="300" />
-			</div>
-		  </section>
+		</section>
 
 		<section id="services" class="services">
-			<h2>{t('services.title')}</h2>
-			<div class="service-grid">
-				<div class="service-item">
-					<Icon name="mdi:web" />
-					<h3>{t('services.websiteOptimization.title')}</h3>
-					<p>{t('services.websiteOptimization.description')}</p>
-				</div>
-				<div class="service-item">
-					<Icon name="mdi:creation" />
-					<h3>{t('services.websiteCreation.title')}</h3>
-					<p>{t('services.websiteCreation.description')}</p>
-				</div>
-				<div class="service-item">
-					<Icon name="mdi:google" />
-					<h3>{t('services.googleBusinessManagement.title')}</h3>
-					<p>{t('services.googleBusinessManagement.description')}</p>
-				</div>
-				<div class="service-item">
-					<Icon name="mdi:qrcode" />
-					<h3>{t('services.aiReviewSystem.title')}</h3>
-					<p>{t('services.aiReviewSystem.description')}</p>
+			<div class="container">
+				<h2>{t('services.title')}</h2>
+				<div class="service-grid">
+					<div class="service-item service-feature">
+						<Icon name="mdi:web" />
+						<h3>{t('services.websiteOptimization.title')}</h3>
+						<p>{t('services.websiteOptimization.description')}</p>
+					</div>
+					<div class="service-item">
+						<Icon name="mdi:creation" />
+						<h3>{t('services.websiteCreation.title')}</h3>
+						<p>{t('services.websiteCreation.description')}</p>
+					</div>
+					<div class="service-item">
+						<Icon name="mdi:google" />
+						<h3>{t('services.googleBusinessManagement.title')}</h3>
+						<p>{t('services.googleBusinessManagement.description')}</p>
+					</div>
+					<div class="service-item">
+						<Icon name="mdi:qrcode" />
+						<h3>{t('services.aiReviewSystem.title')}</h3>
+						<p>{t('services.aiReviewSystem.description')}</p>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section id="about" class="about">
-			<h2>{t('about.title')}</h2>
-			<p>{t('about.content1')}</p>
-			<p>{t('about.content2')}</p>
+			<div class="container about-inner">
+				<h2>{t('about.title')}</h2>
+				<p>{t('about.content1')}</p>
+				<p>{t('about.content2')}</p>
+			</div>
 		</section>
 
 		<section class="cta">
-			<h2>{t('cta.title')}</h2>
-			<p>{t('cta.content')}</p>
-			<a href={`/${lang}/contact`} class="cta-button">{t('cta.button')}</a>
+			<div class="container cta-inner">
+				<h2>{t('cta.title')}</h2>
+				<p>{t('cta.content')}</p>
+				<a href={`/${lang}/contact`} class="cta-button cta-button-light">{t('cta.button')}</a>
+			</div>
 		</section>
 	</main>
 	<Footer />
 </Layout>
 
 <style>
+	/* Hero: asymmetric split */
 	.hero {
-		text-align: center;
-		padding: 4rem 0;
-		background-color: #f0f8ff;
+		padding-block: clamp(3.5rem, 7vw, 6rem) clamp(4rem, 8vw, 7rem);
+	}
+	.hero-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+		gap: clamp(2rem, 5vw, 4.5rem);
+		align-items: center;
+	}
+	.star-row {
+		display: flex;
+		gap: 0.3rem;
+		margin-bottom: 1.25rem;
+	}
+	.star-row [data-icon] {
+		width: 1.35rem;
+		height: 1.35rem;
+		color: var(--line);
+	}
+	.star-row [data-icon]:first-child {
+		color: var(--star);
 	}
 	.hero h1 {
-		font-size: 2.5rem;
-		margin-bottom: 1rem;
+		font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+		max-width: 22ch;
+		text-wrap: balance;
+		margin-bottom: 1.25rem;
 	}
-	.hero p {
-		font-size: 1.2rem;
+	.hero-sub {
+		font-size: 1.15rem;
+		color: var(--body);
+		max-width: 48ch;
 		margin-bottom: 2rem;
 	}
-	.free-tip {
-		display: flex;
-		align-items: center;
-		background-color: #ff6b6b;
-		padding: 2rem;
-		border-radius: 8px;
-		margin: 2rem 0;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	}
-	.free-tip-content {
-		flex: 1;
-		padding-right: 2rem;
-		color: white;
-	}
-	.free-tip h2 {
-		font-size: 2rem;
-		margin-bottom: 1rem;
-		color: white;
-	}
-	.free-tip p {
-		font-size: 1.1rem;
-		margin-bottom: 1.5rem;
-	}
-	.free-tip .cta-button {
-		background-color: white;
-		color: #ff6b6b;
-		font-weight: bold;
-		padding: 0.75rem 1.5rem;
-		font-size: 1.1rem;
-	}
-	.free-tip .cta-button:hover {
-		background-color: #f0f0f0;
-	}
-	.free-tip-image {
-		flex: 1;
-	}
-	.free-tip-image img {
-		max-width: 100%;
-		height: auto;
-		border-radius: 8px;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	.hero-visual img {
+		display: block;
+		width: 100%;
+		border-radius: var(--radius-card);
+		box-shadow: 0 24px 48px -16px rgba(13, 31, 51, 0.25);
 	}
 
+	/* Free tip: full-width white band */
+	.free-tip {
+		background-color: var(--surface);
+		border-block: 1px solid var(--line);
+		padding-block: clamp(4rem, 8vw, 7rem);
+	}
+	.free-tip-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+		gap: clamp(2rem, 5vw, 4.5rem);
+		align-items: center;
+	}
+	.free-tip h2 {
+		font-size: clamp(1.8rem, 3vw, 2.4rem);
+		max-width: 26ch;
+		margin-bottom: 1.5rem;
+	}
 	.highlight {
-  font-weight: bold;
-  color: rgb(var(--accent));
-  background-color: #ffff00;
-  padding: 2px 4px; /* Add some padding to the highlighted text */
-}
+		color: var(--accent);
+		font-weight: 600;
+	}
+	.cta-container {
+		margin-top: 1.75rem;
+	}
+	.free-tip-note {
+		background-color: var(--bg);
+		border: 1px solid var(--line);
+		border-radius: var(--radius-card);
+		box-shadow: 0 16px 36px -18px rgba(13, 31, 51, 0.25);
+		padding: 2rem;
+	}
+	.free-tip-note [data-icon] {
+		width: 1.75rem;
+		height: 1.75rem;
+		color: var(--star);
+		margin-bottom: 0.9rem;
+	}
+	.free-tip-note p {
+		margin: 0;
+		font-size: 1.1rem;
+		font-weight: 500;
+		line-height: 1.6;
+		color: var(--ink);
+	}
+
+	/* Services: asymmetric bento */
 	.services {
-		margin-bottom: 2rem;
+		padding-block: clamp(4rem, 8vw, 7rem);
+	}
+	.services h2 {
+		font-size: clamp(1.8rem, 3vw, 2.4rem);
+		margin-bottom: 2.5rem;
 	}
 	.service-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 2rem;
+		grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+		gap: 1.25rem;
 	}
 	.service-item {
-		background-color: #fff;
-		padding: 1.5rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		text-align: center;
+		background-color: var(--surface);
+		border: 1px solid var(--line);
+		border-radius: var(--radius-card);
+		padding: 1.75rem;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+	.service-item:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 12px 28px -14px rgba(13, 31, 51, 0.22);
+	}
+	.service-feature {
+		grid-row: 1 / span 3;
+		background-color: #eef4fa;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		justify-content: center;
+		padding: clamp(2rem, 4vw, 3rem);
 	}
-	.service-item [astro-icon] {
-		width: 3rem;
-		height: 3rem;
-		color: rgb(var(--accent));
-		margin-bottom: 1rem;
+	.service-item [data-icon] {
+		width: 2.5rem;
+		height: 2.5rem;
+		color: var(--accent);
+	}
+	.service-feature [data-icon] {
+		width: 3.5rem;
+		height: 3.5rem;
 	}
 	.service-item h3 {
-		font-size: 1.2rem;
-		margin-bottom: 0.5rem;
+		font-size: 1.15rem;
+		margin: 0.9rem 0 0.5rem;
+	}
+	.service-feature h3 {
+		font-size: 1.5rem;
+		margin-top: 1.25rem;
 	}
 	.service-item p {
-		font-size: 0.9rem;
-		line-height: 1.4;
+		margin: 0;
+		font-size: 0.95rem;
+		color: var(--body);
 	}
+	.service-feature p {
+		font-size: 1.05rem;
+	}
+
+	/* About: narrow prose column */
 	.about {
-		background-color: #f0f8ff;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-bottom: 2rem;
+		padding-block: clamp(4rem, 8vw, 7rem);
 	}
-	.cta {
+	.about-inner {
+		max-width: 65ch;
+	}
+	.about-inner::before {
+		content: '';
+		display: block;
+		width: 72px;
+		height: 1px;
+		background-color: var(--line);
+		margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+	}
+	.about h2 {
+		font-size: clamp(1.8rem, 3vw, 2.2rem);
 		text-align: center;
-		background-color: #ffe4e1;
-		padding: 2rem;
-		border-radius: 8px;
+		margin-bottom: 1.75rem;
 	}
-	.cta-button {
-		display: inline-block;
-		background-color: rgb(var(--accent));
-		color: white;
-		text-decoration: none;
-		padding: 0.5rem 1rem;
-		border-radius: 4px;
-		font-weight: bold;
-		transition: background-color 0.3s ease;
+	.about p {
+		font-size: 1.05rem;
 	}
-	.cta-button:hover {
-		background-color: rgb(var(--accent-dark));
+	.about p:last-child {
+		margin-bottom: 0;
 	}
+
+	/* Final CTA: the one dark band */
+	.cta {
+		background-color: var(--navy);
+		padding-block: clamp(4rem, 8vw, 7rem);
+	}
+	.cta-inner {
+		text-align: center;
+	}
+	.cta h2 {
+		color: var(--surface);
+		font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+		margin-bottom: 1rem;
+	}
+	.cta p {
+		color: #c9d6e2;
+		font-size: 1.1rem;
+		max-width: 50ch;
+		margin: 0 auto 2.25rem;
+	}
+	.cta .cta-button-light {
+		background-color: var(--surface);
+		color: var(--navy);
+	}
+	.cta .cta-button-light:hover {
+		background-color: #e8eef5;
+	}
+
+	/* One-shot hero reveal */
+	@media (prefers-reduced-motion: no-preference) {
+		@keyframes hero-rise {
+			from {
+				opacity: 0;
+				transform: translateY(14px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+		.star-row,
+		.hero h1,
+		.hero-sub,
+		.hero-copy .cta-button,
+		.hero-visual {
+			animation: hero-rise 0.55s ease both;
+		}
+		.hero h1 {
+			animation-delay: 0.08s;
+		}
+		.hero-sub {
+			animation-delay: 0.16s;
+		}
+		.hero-copy .cta-button {
+			animation-delay: 0.24s;
+		}
+		.hero-visual {
+			animation-delay: 0.18s;
+		}
+	}
+
 	@media (max-width: 768px) {
-    /* Ocultar la imagen en la sección free-tip */
-    .free-tip-image {
-        display: none;
-    }
-    
-    /* Ajustes existentes para mejorar la legibilidad */
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    .hero p {
-        font-size: 1.1rem;
-    }
-    .free-tip h2 {
-        font-size: 1.7rem;
-    }
-    .free-tip p {
-        font-size: 1rem;
-    }
-    .service-item h3 {
-        font-size: 1.2rem;
-    }
-    .service-item p {
-        font-size: 0.9rem;
-    }
-}
-@media (max-width: 480px) {
-    /* Ocultar la imagen en la sección free-tip */
-    .free-tip-image {
-        display: none;
-    }
-    
-    /* Ajustes existentes para mejorar la legibilidad */
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    .hero p {
-        font-size: 1.2rem;
-    }
-    .free-tip h2 {
-        font-size: 2rem;
-    }
-    .free-tip p {
-        font-size: 1.1rem;
-    }
-    .service-item h3 {
-        font-size: 1.3rem;
-    }
-    .service-item p {
-        font-size: 1rem;
-    }
-}
+		.hero-grid,
+		.free-tip-grid,
+		.service-grid {
+			grid-template-columns: minmax(0, 1fr);
+		}
+		.service-feature {
+			grid-row: auto;
+		}
+		.hero {
+			padding-block: 2.5rem 4rem;
+		}
+		.hero-sub {
+			font-size: 1.05rem;
+		}
+	}
 </style>

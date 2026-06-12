@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { languages } from '../i18n/ui';
 
@@ -8,7 +8,7 @@ const t = useTranslations(lang);
 ---
 
 <header>
-	<nav>
+	<nav class="container">
 		<a href={`/${lang}`} class="logo">
 			<Icon name="mdi:star" />
 			<span>OneStar</span>
@@ -22,7 +22,7 @@ const t = useTranslations(lang);
 				{Object.entries(languages).map(([code, label]) => (
 					code !== lang && (
 						<a href={`/${code}`} title={`Switch to ${label}`}>
-							{code === 'en' ? '🇺🇸' : '🇪🇸'}
+							{code.toUpperCase()}
 						</a>
 					)
 				))}
@@ -33,62 +33,106 @@ const t = useTranslations(lang);
 
 <style>
 	header {
-		background-color: #fff;
-		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-		padding: 1rem;
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background-color: rgba(255, 255, 255, 0.85);
+		-webkit-backdrop-filter: blur(8px);
+		backdrop-filter: blur(8px);
+		border-bottom: 1px solid var(--line);
 	}
 	nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		max-width: 1200px;
-		margin: 0 auto;
+		min-height: 64px;
+		gap: 1rem;
 	}
 	.logo {
 		display: flex;
 		align-items: center;
-		font-size: 1.5rem;
-		font-weight: bold;
-		color: rgb(var(--accent));
+		gap: 0.5rem;
+		font-size: 1.3rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		color: var(--ink);
 		text-decoration: none;
 	}
-	.logo [astro-icon] {
-		width: 2rem;
-		height: 2rem;
-		margin-right: 0.5rem;
+	.logo [data-icon] {
+		width: 1.6rem;
+		height: 1.6rem;
+		color: var(--star);
 	}
 	ul {
 		display: flex;
+		align-items: center;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+		gap: 1.5rem;
 	}
-	li {
-		margin-left: 1rem;
-	}
-	a {
-		color: #333;
+	li:not(.lang-switcher) a {
+		position: relative;
+		display: inline-block;
+		padding-block: 0.35rem;
+		color: var(--body);
 		text-decoration: none;
 		font-weight: 500;
+		font-size: 0.95rem;
+		transition: color 0.2s ease;
 	}
-	a:hover {
-		color: rgb(var(--accent));
+	li:not(.lang-switcher) a::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 2px;
+		background-color: var(--accent);
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.2s ease;
+	}
+	li:not(.lang-switcher) a:hover,
+	li:not(.lang-switcher) a:focus-visible {
+		color: var(--accent);
+	}
+	li:not(.lang-switcher) a:hover::after,
+	li:not(.lang-switcher) a:focus-visible::after {
+		transform: scaleX(1);
 	}
 	.lang-switcher a {
-		font-size: 1.5rem;
+		display: inline-block;
+		padding: 0.3rem 0.8rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-pill);
+		color: var(--body);
 		text-decoration: none;
+		font-size: 0.8rem;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		transition: color 0.2s ease, border-color 0.2s ease;
+	}
+	.lang-switcher a:hover,
+	.lang-switcher a:focus-visible {
+		color: var(--accent);
+		border-color: var(--accent);
 	}
 	@media (max-width: 768px) {
 		nav {
 			flex-direction: column;
 			align-items: flex-start;
+			gap: 0;
+			padding-block: 0.6rem 0;
 		}
 		ul {
-			margin-top: 1rem;
+			width: 100%;
+			overflow-x: auto;
+			padding-block: 0.4rem 0.6rem;
+			gap: 1.1rem;
 		}
-		li {
-			margin-left: 0;
-			margin-right: 1rem;
+		li a {
+			white-space: nowrap;
 		}
 	}
 </style>
