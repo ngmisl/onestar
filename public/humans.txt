@@ -1,0 +1,10 @@
+/* TEAM */
+	Team: OneStar team
+	Contact: hi@onestar.cloud
+	Location: Remote
+
+/* SITE */
+	Language: English / Español
+	Doctype: HTML5
+	Components: Astro
+	Standards: HTML5, CSS3

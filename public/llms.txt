@@ -1,0 +1,31 @@
+# OneStar
+
+> OneStar helps local and physical businesses turn online reviews, including negative ones, into a trust asset through reputation management, Google Business Profile management, websites, and an AI-powered QR review system.
+
+OneStar is a digital services agency for brick-and-mortar businesses such as gyms, restaurants, and local shops. The name refers to the 1-star review: people read negative reviews first, and a professionally handled negative review builds more trust than hundreds of unanswered 5-star ratings. OneStar monitors reviews, writes professional public responses, and turns real criticism into displayed trust. The first consultation is free. Content is available in English and Spanish.
+
+## Pages
+
+- [Home](https://onestar.cloud/): Overview of OneStar services for local businesses, in English
+- [Home (Spanish)](https://onestar.cloud/es): Overview of OneStar services, in Spanish
+- [Contact](https://onestar.cloud/contact): Get in touch for a free first consultation
+- [Contact (Spanish)](https://onestar.cloud/es/contact): Contact page in Spanish
+- [Affiliate Program](https://onestar.cloud/affiliate): Earn a 10% perpetual commission on referred sales
+- [Privacy Policy](https://onestar.cloud/privacy-policy): How OneStar handles personal data
+- [Terms of Service](https://onestar.cloud/terms-of-service): Terms governing use of OneStar services
+
+## Services
+
+- Review & Reputation Management: monitoring of online reviews and professional public responses, especially to negative reviews, turning criticism into trust
+- Google Business Profile Management: setup, optimization, and ongoing upkeep of Google Business Profiles for local visibility
+- Website Creation & Optimization: fast, modern websites for local businesses, built and optimized for search and conversions
+- AI-Powered QR Review System: QR codes placed in the physical business that make it easy for customers to leave reviews, assisted by AI
+
+## Contact
+
+- Email: hi@onestar.cloud
+- Bluesky: https://bsky.app/profile/onestar.cloud
+
+## Optional
+
+- [Full company and service details](https://onestar.cloud/llms-full.txt): expanded version of this file for AI agents that want complete context

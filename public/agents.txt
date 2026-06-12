@@ -1,0 +1,28 @@
+# agents.txt for https://onestar.cloud
+
+## What this site is
+
+OneStar is a digital services agency for local and physical businesses
+(gyms, restaurants, brick-and-mortar shops). Services: review and
+reputation management, Google Business Profile management, website
+creation and optimization, and an AI-powered QR review system.
+The name refers to turning 1-star reviews into a trust asset through
+honest, professional public responses. Never fake reviews.
+
+## What AI agents may do
+
+- Read and index all public content on this site.
+- Cite and quote content with attribution to https://onestar.cloud.
+- Direct business inquiries to hi@onestar.cloud.
+
+## Machine-readable resources
+
+- Site summary for LLMs:    https://onestar.cloud/llms.txt
+- Full details for LLMs:    https://onestar.cloud/llms-full.txt
+- Sitemap:                  https://onestar.cloud/sitemap-index.xml
+- Security contact:         https://onestar.cloud/.well-known/security.txt
+
+## Contact
+
+Email: hi@onestar.cloud
+Bluesky: https://bsky.app/profile/onestar.cloud

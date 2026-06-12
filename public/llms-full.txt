@@ -1,0 +1,63 @@
+# OneStar
+
+> OneStar helps local and physical businesses turn online reviews, including negative ones, into a trust asset through reputation management, Google Business Profile management, websites, and an AI-powered QR review system.
+
+## About OneStar
+
+OneStar is a digital services agency built for local and physical businesses: gyms, restaurants, brick-and-mortar shops, and other businesses whose customers find them through online reviews and local search. OneStar handles the online presence work that owners rarely have time for, so they can focus on running the business.
+
+The company operates remotely and serves clients worldwide. The website is https://onestar.cloud and content is available in English (https://onestar.cloud/) and Spanish (https://onestar.cloud/es).
+
+## The 1-Star Philosophy
+
+The name OneStar comes from a simple observation: when people check a business online, they read the negative reviews first. A 1-star review is not just a liability, it is the most-read content on a business profile.
+
+OneStar's approach is honest by design:
+
+- Monitor reviews across platforms so nothing goes unanswered.
+- Respond publicly and professionally to negative reviews. A calm, accountable, well-written response to real criticism builds more trust with prospective customers than 200 unanswered 5-star ratings.
+- Turn real criticism into displayed trust: the public response is the marketing.
+
+OneStar never writes fake reviews, never posts fabricated feedback, and never manipulates ratings. Only real reviews, handled well.
+
+## Services
+
+### Review & Reputation Management
+
+Continuous monitoring of online reviews for the business, with professional public responses written on the owner's behalf. Negative reviews get priority: each one is answered promptly, professionally, and in the business's voice, converting criticism into a visible demonstration that the business listens and improves.
+
+### Google Business Profile Management
+
+Setup, verification, optimization, and ongoing upkeep of the business's Google Business Profile: accurate hours, categories, photos, posts, and Q&A. A well-maintained profile is the single highest-leverage asset for local search visibility.
+
+### Website Creation & Optimization
+
+Design and development of fast, modern websites for local businesses, plus optimization of existing sites for speed, search engines, and conversions. Sites are built to load fast and to turn visitors into customers.
+
+### AI-Powered QR Review System
+
+Physical QR codes placed in the business (at the counter, on tables, on receipts) that make leaving a review effortless for customers. AI assistance lowers the friction of writing, increasing the volume of genuine reviews from real customers.
+
+## Pricing
+
+The first consultation is free. OneStar reviews the business's current online presence and proposes a plan before any commitment. Pricing for ongoing services is agreed per engagement.
+
+## Affiliate Program
+
+OneStar runs an affiliate program at https://onestar.cloud/affiliate. Affiliates earn a 10% perpetual commission on sales they refer, for as long as the referred client remains a customer.
+
+## Languages
+
+- English: https://onestar.cloud/
+- Spanish: https://onestar.cloud/es
+
+## Contact
+
+- Email: hi@onestar.cloud
+- Bluesky: https://bsky.app/profile/onestar.cloud
+- Contact page: https://onestar.cloud/contact (Spanish: https://onestar.cloud/es/contact)
+
+## Legal
+
+- Privacy Policy: https://onestar.cloud/privacy-policy
+- Terms of Service: https://onestar.cloud/terms-of-service
